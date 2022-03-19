@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Open+Sans:wght@500&family=Quicksand:wght@300;400;500;600;700&family=Roboto:wght@100&family=Zen+Kurenaido&display=swap');
+:root {
+    --color1: #F5F5F5;
+    /* --color2: #545864; */
+    --color2: #4C525D;
+    --color3: #C3D3DF;
+    --color4: #E6E9D8;
+    --color4dark: #888980;
+    --spacing: max(2vw, 20px);
+    --rounded: 5px;
+}
+
+* {
+    font-family: "Quicksand";
+    font-weight: normal;
+    color: var(--color2);
+    border-radius: var(--rounded);
+}
+
+::selection {
+    background-color: var(--color4);
+}
+
+a:link {}
+
+a:visited {}
+
+a:focus {}
+
+a:hover {}
+
+a:active {}

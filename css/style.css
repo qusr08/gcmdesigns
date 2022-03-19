@@ -1,0 +1,96 @@
+body {
+    margin: var(--spacing);
+    background-color: var(--color1);
+}
+
+body>div {
+    margin: var(--spacing) 0;
+}
+
+hr {
+    border-width: -calc(var(--rounded) / 2);
+    border-style: solid;
+    border-color: var(--color2);
+}
+
+#title {
+    text-align: center;
+    font-size: 3.5em;
+    /* background-color: var(--color4); */
+}
+
+#description {
+    padding: 0 10vw;
+    text-indent: calc(var(--spacing) * 2);
+}
+
+.link-list {
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1 1 0;
+    justify-content: center;
+    gap: var(--spacing);
+}
+
+.link-list>a {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: calc(var(--spacing) / 3) calc(var(--spacing) / 1.5);
+    background-color: var(--color3);
+    transition: all 0.25s ease;
+}
+
+.link-list>a:hover {
+    /* filter: brightness(75%); */
+    transform: scale(120%);
+    background-color: var(--color4);
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: var(--spacing);
+    /* background-color: var(--color4); */
+}
+
+.gallery>a {
+    aspect-ratio: 1;
+    cursor: pointer;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: var(--spacing);
+    /* border: var(--rounded) solid var(--color4); */
+    /* border: 0 solid var(--color4); */
+    background-color: transparent;
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    /* background-color: var(--color1); */
+    transition: all 0.25s ease;
+}
+
+.gallery>a>* {
+    opacity: 0%;
+    line-height: calc(var(--spacing) / 2);
+    color: var(--color1);
+    transition: opacity 0.25s ease;
+}
+
+.gallery>a:hover {
+    /* background-color: var(--color4); */
+    /* border: calc(var(--rounded) * 2) solid var(--color4); */
+    background-color: rgba(0, 0, 0, 0.5);
+    transform: scale(105%);
+}
+
+.gallery>a:hover>* {
+    opacity: 100%;
+}
