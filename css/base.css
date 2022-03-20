@@ -5,9 +5,9 @@
     --color2: #4C525D;
     --color3: #C3D3DF;
     --color4: #E6E9D8;
-    --color4dark: #888980;
     --spacing: max(2vw, 20px);
     --rounded: 5px;
+    --gallery-size: 250px;
 }
 
 * {
@@ -18,7 +18,7 @@
 }
 
 ::selection {
-    background-color: var(--color4);
+    background-color: var(--color3);
 }
 
 a:link {}
