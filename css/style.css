@@ -1,10 +1,17 @@
 body {
     margin: var(--spacing);
-    background-color: var(--color1);
+    background-image: url('../media/background.png');
+    background-position: center;
+    background-size: 2500px;
+    background-repeat: repeat;
+    /* background-color: var(--color1); */
+    background-color: rgba(255, 255, 255, 0.8);
+    background-blend-mode: lighten;
 }
 
 body>div {
     margin: var(--spacing) 0;
+    filter: drop-shadow(0 0 var(--rounded) rgba(0, 0, 0, 0.2));
 }
 
 hr {
@@ -20,7 +27,11 @@ hr {
 }
 
 #description {
-    padding: 0 10vw;
+    /* padding: 0 10vw; */
+    margin-left: 10vw;
+    margin-right: 10vw;
+    padding: calc(var(--spacing) / 2);
+    background-color: var(--color1);
     text-indent: calc(var(--spacing) * 2);
 }
 
