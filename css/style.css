@@ -20,6 +20,17 @@ hr {
     border-color: var(--color2);
 }
 
+.expanded-title {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.expanded-title>h1{
+    margin: 0;
+}
+
 #title {
     text-align: center;
     font-size: 3.5em;
