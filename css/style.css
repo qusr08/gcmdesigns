@@ -54,6 +54,42 @@ hr {
     gap: var(--spacing);
 }
 
+.linkedin {
+    width: 70px;
+    content: url('../media/logos/linkedin-logo-blue.png');
+}
+
+.linkedin:hover {
+    content: url('../media/logos/linkedin-logo-green.png');
+}
+
+.email {
+    width: 70px;
+    content: url('../media/logos/email-logo-green.png');
+}
+
+.email:hover {
+    content: url('../media/logos/email-logo-blue.png');
+}
+
+.resume {
+    width: 70px;
+    content: url('../media/logos/resume-logo-green.png');
+}
+
+.resume:hover {
+    content: url('../media/logos/resume-logo-blue.png');
+}
+
+.instagram {
+    content: url('../media/logos/instagram-logo-blue.png');
+    width: 70px;
+}
+
+.instagram:hover {
+    content: url('../media/logos/instagram-logo-green.png');
+}
+
 .button {
     position: relative;
     display: flex;
@@ -102,15 +138,18 @@ hr {
 .gallery>a>* {
     opacity: 0%;
     text-align: center;
+    font-weight: 500;
     /* line-height: calc(var(--spacing) / 2); */
-    color: var(--color1);
+    /* color: var(--color2); */
+    color: white;
     transition: opacity 0.25s ease;
 }
 
 .gallery>a:hover {
     /* background-color: var(--color4); */
     /* border: calc(var(--rounded) * 2) solid var(--color4); */
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #9DB3C4;
+    background-blend-mode: soft-light;
     transform: scale(105%);
 }
 
