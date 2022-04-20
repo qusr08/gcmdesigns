@@ -24,6 +24,7 @@ hr {
     display: grid;
     grid-auto-flow: column;
     grid-auto-columns: 1fr;
+    align-items: center;
     margin: calc(var(--spacing) / 2) 0;
 }
 
@@ -39,11 +40,21 @@ hr {
 
 #description {
     /* padding: 0 10vw; */
-    margin-left: 10vw;
-    margin-right: 10vw;
+    margin-left: 15vw;
+    margin-right: 15vw;
     padding: var(--spacing);
+    line-height: 2em;
     background-color: var(--color1);
     text-indent: calc(var(--spacing) * 2);
+}
+
+.description-image {
+    width: 250px;
+    float: left;
+    margin: 0 var(--spacing) var(--spacing) 0;
+    outline: solid 7px var(--color2);
+    outline-offset: -2px;
+    border-radius: 100%;
 }
 
 .link-list {
@@ -55,7 +66,7 @@ hr {
 }
 
 .linkedin {
-    width: 70px;
+    width: 50px;
     content: url('../media/logos/linkedin-logo-blue.png');
 }
 
@@ -64,7 +75,7 @@ hr {
 }
 
 .email {
-    width: 70px;
+    width: 50px;
     content: url('../media/logos/email-logo-green.png');
 }
 
@@ -72,8 +83,17 @@ hr {
     content: url('../media/logos/email-logo-blue.png');
 }
 
+.me {
+    content: url('../media/logos/me-logo-gray.png');
+    width: 50px;
+}
+
+.me:hover {
+    content: url('../media/logos/me-logo-white.png');
+}
+
 .resume {
-    width: 70px;
+    width: 50px;
     content: url('../media/logos/resume-logo-green.png');
 }
 
@@ -83,7 +103,7 @@ hr {
 
 .instagram {
     content: url('../media/logos/instagram-logo-blue.png');
-    width: 70px;
+    width: 50px;
 }
 
 .instagram:hover {
@@ -201,9 +221,18 @@ hr {
         grid-auto-rows: 1fr;
     }
     #description {
+        display: flex;
+        flex-flow: column nowrap;
         margin: var(--spacing) 0;
         padding: var(--spacing);
         background-color: var(--color1);
-        text-indent: calc(var(--spacing) * 2);
+        /* text-indent: calc(var(--spacing) * 2); */
+    }
+    .description-image {
+        outline: unset;
+        align-self: center;
+        float: unset;
+        margin: 0;
+        margin-bottom: var(--spacing);
     }
 }
