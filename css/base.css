@@ -5,28 +5,46 @@
     --color2: #4C525D;
     --color3: #C3D3DF;
     --color4: #E6E9D8;
-    --spacing: max(2vw, 20px);
-    --rounded: 5px;
+    --spacing: min(2vw, 20px);
+    --rounded: 20px;
     --gallery-size: 250px;
 }
 
 * {
     font-family: "Quicksand";
-    font-weight: normal;
-    color: var(--color2);
-    border-radius: var(--rounded);
+    /* font-weight: normal; */
+    /* color: var(--color2); */
+    margin: 0;
+    /* border-radius: var(--rounded); */
+}
+
+h1,
+h2 {
+    font-weight: 400;
 }
 
 ::selection {
     background-color: var(--color3);
 }
 
-a:link {}
+a:link {
+    color: var(--color2);
+    font-weight: normal;
+    text-decoration: none;
+}
 
-a:visited {}
+a:visited {
+    color: var(--color2);
+}
 
-a:focus {}
+a:focus {
+    color: var(--color2);
+}
 
-a:hover {}
+a:hover {
+    color: var(--color2);
+}
 
-a:active {}
+a:active {
+    color: var(--color2);
+}
