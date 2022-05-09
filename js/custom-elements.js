@@ -5,9 +5,7 @@ window.customElements.define('custom-header', class extends HTMLElement {
 
     connectedCallback() {
         this.innerHTML = `
-            <h1 class="header-title">
-                <a href="index.html">gcmdesigns</a>
-            </h1>
+            <h1 class="header-title"><a href="index.html">gcmdesigns</a></h1>
             <div class="header-list">
                 <a href="about.html"><p>About</p></a>
                 <div class="dropdown">
@@ -22,11 +20,11 @@ window.customElements.define('custom-header', class extends HTMLElement {
                 <div class="dropdown">
                     <a><p>Projects</p></a>
                     <div class="dropdown-list">
-                        <a href="">Zona</a>
-                        <a href="">Community Cycle</a>
-                        <a href="">MelOrganic</a>
-                        <a href="">CLC Luminary</a>
-                        <a href="">Roanoke Follies</a>
+                        <a href="zona.html">Zona</a>
+                        <a href="communitycycle.html">Community Cycle</a>
+                        <a href="melorganic.html">MelOrganic</a>
+                        <a href="luminary.html">CLC Luminary</a>
+                        <a href="follies.html">Roanoke Follies</a>
                     </div>
                 </div>
             </div>
