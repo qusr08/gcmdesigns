@@ -19,6 +19,7 @@ custom-header {
     flex-flow: row;
     justify-content: space-between;
     align-items: stretch;
+    z-index: 10;
 }
 
 .header-title {
