@@ -23,8 +23,7 @@ custom-header {
 
 .header-title {
     position: relative;
-    margin: calc(var(--spacing) / 2);
-    padding: calc(var(--spacing) / 2);
+    margin: var(--spacing);
 }
 
 .header-title::after {
@@ -32,8 +31,8 @@ custom-header {
     position: absolute;
     width: 0px;
     z-index: -1;
-    height: 100%;
-    left: 0;
+    height: var(--border);
+    left: 50%;
     bottom: 0;
     background-color: var(--color3);
     transition: var(--transition);
@@ -41,6 +40,7 @@ custom-header {
 
 .header-title:hover::after {
     width: 100%;
+    left: 0;
 }
 
 .header-list {
@@ -165,7 +165,7 @@ custom-header {
 .description>img {
     width: 250px;
     float: right;
-    outline: solid var(--border) var(--color2);
+    outline: var(--border) solid var(--color1);
     outline-offset: calc(var(--border) / -2);
     border-radius: 100%;
 }
