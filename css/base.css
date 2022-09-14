@@ -5,9 +5,10 @@
     --color3: #C3D3DF;
     --spacing: min(2vw, 20px);
     --rounded: 20px;
-    --gallery-size: 250px;
+    --gallery-size: 275px;
     --border: 5px;
     --transition: 0.3s;
+    --header-size: 15vh;
 }
 
 * {
@@ -44,4 +45,21 @@ a:hover {
 
 a:active {
     color: var(--color2);
+}
+
+::-webkit-scrollbar {
+    width: calc(var(--border) * 2);
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color1);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: var(--border);
+    background: var(--color2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color3);
 }

@@ -7,6 +7,7 @@ window.customElements.define('custom-header', class extends HTMLElement {
         this.innerHTML = `
             <h1 class="header-title"><a href="index.html">gcmdesigns</a></h1>
             <div class="header-list">
+                <div style="position: absolute; bottom: 100%; background-color: var(--color1); width: 100%; height: 150%;"></div>
                 <div class="dropdown">
                     <a><p>About</p></a>
                     <div class="dropdown-list">
@@ -32,7 +33,7 @@ window.customElements.define('custom-header', class extends HTMLElement {
                         <a href="communitycycle.html">Community Cycle</a>
                         <!-- <a href="melorganic.html">MelOrganic</a> -->
                         <a href="luminary.html">CLC Luminary</a>
-                        <a href="follies.html">Roanoke Follies</a>
+                        <a href="follies.html">Follies</a>
                         <a href="kirigami.html">Kirigami</a>
                     </div>
                 </div>
