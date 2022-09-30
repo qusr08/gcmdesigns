@@ -11,7 +11,7 @@ window.customElements.define('custom-header', class extends HTMLElement {
                 <div class="dropdown">
                     <a><p>About</p></a>
                     <div class="dropdown-list">
-                        <a>Resume</a>
+                        <a href="media/Resume.pdf">Resume</a>
                         <a href="about.html">Bio</a>
                     </div>
                 </div>
