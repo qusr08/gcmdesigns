@@ -27,6 +27,7 @@ window.customElements.define('custom-header', class extends HTMLElement {
                     <a><p>Projects</p></a>
                     <div class="dropdown-list">
                         <a href="miomedkit.html">MioMed Kit</a>
+                        <a href="dos.html">DOS</a>
                         <a href="toble.html">Toble</a>
                         <a href="flatware.html">Flatware</a>
                         <a href="zona.html">Zona</a>
