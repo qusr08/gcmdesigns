@@ -8,44 +8,47 @@
 
     <link rel="stylesheet" href="style.css">
 
+    <script src="transitions.js"></script>
+
     <title>DEV WEBSITE</title>
 </head>
 
 <body>
-    <div id="header">
-        <img id="logo" src="gcm-logo.png">
-        <h1>Gabriela Colón-Meléndez</h1>
-        <!-- <img class="himg" src="gabriela-colon-melendez.png"> -->
-        <p>
-            Hi! My name is Gaby and I am a third-year Industrial Design student at the Virginia Polytechnic Institute and State University in the College of Architecture, Arts, and Design. This page displays the work and projects I have created or been a part of.
-        </p>
-        <div class="hori-list expand">
-            <div class="hori-list">
-                <a class="button"><img src="email-logo.png"></a>
-                <a class="button"><img src="instagram-logo.png"></a>
-                <a class="button"><img src="linkedin-logo.png"></a>
-            </div>
-            <div class="hori-list">
-                <a class="button">about</a>
-                <a class="button">resume</a>
+    <img id="logo" src="logos/gcm-logo.png">
+    <div id="content">
+        <div id="header">
+            <h1>Gabriela Colón-Meléndez</h1>
+            <p>Hi! My name is Gaby and I am a third-year Industrial Design student at the Virginia Polytechnic Institute and State University in the College of Architecture, Arts, and Design. This page displays the work and projects I have created or been
+                a part of.</p>
+            <div class="hori-list expand">
+                <div class="hori-list">
+                    <a class="button"><img src="logos/email-logo.png"></a>
+                    <a class="button"><img src="logos/instagram-logo.png"></a>
+                    <a class="button"><img src="logos/linkedin-logo.png"></a>
+                </div>
+                <div class="hori-list">
+                    <a class="button">about</a>
+                    <a class="button">resume</a>
+                </div>
             </div>
         </div>
-    </div>
-    <div id="content">
-
+        <div class="previews">
+            <div class="preview" style="background-image: url('test-preview.png');"><h1>Zona</h1></div>
+            <div class="preview" style="background-image: url('test-preview.png');"><h1>Bag</h1></div>
+            <div class="preview" style="background-image: url('test-preview.png');"><h1>Mindful Mirror</h1></div>
+            <div class="preview" style="background-image: url('test-preview.png');"><h1>MioMed</h1></div>
+            <div class="preview" style="background-image: url('test-preview.png');"><h1>Toble</h1></div>
+            <div class="preview" style="background-image: url('test-preview.png');"><h1>Flatware</h1></div>
+        </div>
     </div>
     <div id="sidebar">
-        <div class="project">
-            <img class="thumbnail" src="zona/zona-thumbnail.png">
-            <!-- <img class="preview" src="preview.png"> -->
-        </div>
-        <div class="project">
-            <img class="thumbnail" src="thumbnail.png">
-            <!-- <img class="preview" src="preview.png"> -->
-        </div>
-        <div class="project">
-            <img class="thumbnail" src="mindfulmirror-thumbnail.png">
-            <!-- <img class="preview" src="preview.png"> -->
+        <div class="thumbnails">
+            <img class="thumbnail" onmouseenter="selectPreviewByIndex(0);" onmouseleave="selectPreviewByIndex(-1);" src="thumbnails/zona-thumbnail.png">
+            <img class="thumbnail" onmouseenter="selectPreviewByIndex(1);" onmouseleave="selectPreviewByIndex(-1);" src="thumbnails/bag-thumbnail.png">
+            <img class="thumbnail" onmouseenter="selectPreviewByIndex(2);" onmouseleave="selectPreviewByIndex(-1);" src="thumbnails/mindfulmirror-thumbnail.png">
+            <img class="thumbnail" onmouseenter="selectPreviewByIndex(3);" onmouseleave="selectPreviewByIndex(-1);" src="thumbnails/miomed-thumbnail.png">
+            <img class="thumbnail" onmouseenter="selectPreviewByIndex(4);" onmouseleave="selectPreviewByIndex(-1);" src="thumbnails/toble-thumbnail.png">
+            <img class="thumbnail" onmouseenter="selectPreviewByIndex(5);" onmouseleave="selectPreviewByIndex(-1);" src="thumbnails/flatware-thumbnail.png">
         </div>
     </div>
 </body>

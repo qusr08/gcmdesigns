@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 :root {
-    --layout-content-w: 75vw;
-    --layout-content-h: 60vh;
+    --layout-header-w: 75vw;
+    /* --layout-content-h: 60vh; */
+    --layout-header-h: 40vh;
     --layout-spacing-w: 2.5vw;
     --layout-spacing-h: 2.5vh;
     --layout-spacing-text: 10vw;
@@ -37,12 +38,6 @@ h1 {
     font-size: 4em;
     /* color: var(--color-accent); */
 }
-
-
-/* .himg {
-    height: 6em;
-    align-self: start;
-} */
 
 p,
 a {
@@ -100,22 +95,49 @@ a {
 }
 
 body {
+    position: relative;
     display: grid;
-    grid-template-areas: 'header sidebar' 'content sidebar';
-    grid-template-columns: var(--layout-content-w) calc(100vw - var(--layout-content-w));
-    grid-template-rows: calc(100vh - var(--layout-content-h)) var(--layout-content-h);
+    /* grid-template-areas: 'header sidebar' 'content sidebar'; */
+    grid-template-columns: var(--layout-header-w) calc(100vw - var(--layout-header-w));
+    /* grid-template-rows: calc(100vh - var(--layout-content-h)) var(--layout-content-h); */
+    grid-template-rows: 1fr;
+    overflow-x: hidden;
+}
+
+#content {
+    position: relative;
+    /* grid-area: content; */
+    /* padding: var(--layout-spacing-h) var(--layout-spacing-text) var(--layout-spacing-h) var(--layout-spacing-text);   */
+    background-color: var(--color-lighter);
 }
 
 #header {
-    grid-area: header;
-    position: relative;
+    /* grid-area: header; */
+    position: fixed;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
     align-items: stretch;
     padding: calc(var(--layout-spacing-h)) var(--layout-spacing-text) var(--layout-spacing-h) var(--layout-spacing-text);
+    width: calc(var(--layout-header-w) - (var(--layout-spacing-text) * 2));
+    height: calc(var(--layout-header-h) - (var(--layout-spacing-h) * 2));
     background-color: var(--color-lighter);
 }
+
+#sidebar {
+    /* grid-area: sidebar; */
+    position: relative;
+    padding: var(--layout-spacing-h) var(--layout-spacing-w) var(--layout-spacing-h) var(--layout-spacing-w);
+    background-color: var(--color-darker);
+    filter: drop-shadow(20px 0px 30px black);
+    z-index: 100;
+    /* visibility: hidden; */
+}
+
+
+/* #sidebar>p {
+    align-self: stretch;
+} */
 
 #logo {
     position: fixed;
@@ -133,62 +155,53 @@ body {
     filter: invert(1);
     cursor: pointer;
     transition: padding-left 0.5s ease-out;
+    z-index: 100;
 }
 
 #logo:hover {
     padding-left: calc(var(--layout-spacing-h) * 2);
 }
 
-#sidebar {
-    grid-area: sidebar;
-    position: relative;
+
+/* #region Thumbnails */
+
+.thumbnails {
     display: flex;
     flex-flow: column nowrap;
     justify-content: start;
     align-items: center;
     gap: var(--layout-spacing-h);
-    padding: var(--layout-spacing-h) var(--layout-spacing-w) var(--layout-spacing-h) var(--layout-spacing-w);
-    background-color: var(--color-darker);
-    filter: drop-shadow(20px 0px 30px black);
-    /* min-height: 100vh; */
 }
 
-#sidebar>p {
-    align-self: stretch;
-}
-
-
-/* #region Project */
-
-.project {
+.thumbnail {
+    height: calc((100vh - (var(--layout-spacing-h) * 4)) / 3);
     cursor: pointer;
 }
 
 
-/* .preview {
-    position: fixed;
-    left: 0px;
-    bottom: calc(var(--layout-content-h) * -1);
-    width: var(--layout-content-w);
-    height: var(--layout-content-h);
-    transition: bottom 1.5s ease;
-} */
+/* #endregion */
 
-.thumbnail {
-    height: calc((100vh - (var(--layout-spacing-h) * 4)) / 3);
+
+/* #region Previews */
+
+.previews {}
+
+.preview {
+    position: fixed;
+    top: 100vh;
+    left: 0px;
+    padding: 0px var(--layout-spacing-text) 0px var(--layout-spacing-text);
+    width: calc(var(--layout-header-w) - (var(--layout-spacing-text) * 2));
+    height: calc(100vh - var(--layout-header-h));
+    z-index: initial;
+    transition: top 0.5s ease, z-index 0s step-start;
+    text-align: right;
 }
 
-
-/* 
-.project:hover>.preview {
-    bottom: 0px;
-} */
+.preview.show {
+    top: var(--layout-header-h);
+    z-index: 10;
+}
 
 
 /* #endregion */
-
-#content {
-    grid-area: content;
-    padding: var(--layout-spacing-h) var(--layout-spacing-text) var(--layout-spacing-h) var(--layout-spacing-text);
-    background-color: var(--color-lighter);
-}
