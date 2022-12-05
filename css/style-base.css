@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root {
+    --header-w: 75vw;
+    --header-h: 40vh;
+    --spacing-w: 2.5vw;
+    --spacing-h: 2.5vh;
+    --spacing-text: 10vw;
+    --spacing-pixel: 20px;
+    --spacing-button: 5px;
+    --border-radius: 5px;
+    --transition: 1s;
+    --color-lighter: #FFFFFF;
+    --color-darker: #EEEEEE;
+    /* --color-accent: #C3D3DF; */
+    --color-accent: #8ccad7;
+}
+
+* {
+    margin: 0px;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+::selection {
+    color: var(black);
+    background: var(--color-darker);
+}
+
+
+/* #region Scrollbar */
+
+::-webkit-scrollbar {
+    position: absolute;
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--color-lighter);
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: var(--border-radius);
+    background: var(--color-accent);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-accent);
+}
+
+
+/* #endregion */
+
+
+/* #region Text */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    font-weight: 500;
+    text-transform: lowercase;
+    z-index: 5;
+}
+
+h1 {
+    font-size: 4em;
+    /* color: var(--color-accent); */
+}
+
+p,
+a {
+    position: relative;
+    font-size: 1.2em;
+    z-index: 5;
+}
+
+.text-accent {
+    width: 1em;
+    height: 1em;
+    position: absolute;
+    z-index: -1;
+    border-width: 0px;
+    border-style: dotted;
+    border-color: var(--color-accent);
+}
+
+.text-accent.top {
+    border-top-width: 5px;
+    top: calc(min(1em, 20px) * -1);
+}
+
+.text-accent.right {
+    border-right-width: 5px;
+    right: calc(min(1em, 20px) * -1);
+}
+
+.text-accent.bottom {
+    border-bottom-width: 5px;
+    bottom: calc(min(1em, 20px) * -1);
+}
+
+.text-accent.left {
+    border-left-width: 5px;
+    left: calc(min(1em, 20px) * -1);
+}
+
+
+/* #endregion */
+
+
+/* #region Button */
+
+.button {
+    display: flex;
+    cursor: pointer;
+    background-color: var(--color-lighter);
+    /* border-width: var(--border-thickness); */
+    border-width: 0;
+    border-style: solid;
+    border-color: var(--color-accent);
+    border-radius: var(--border-radius);
+    color: var(--color-accent);
+    padding: var(--spacing-button);
+    transform: scale(1, 1);
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.5s ease;
+}
+
+.button>img {
+    height: 1.5em;
+    aspect-ratio: 1;
+    object-fit: contain;
+    filter: invert(1);
+}
+
+.button:hover {
+    background-color: var(--color-accent);
+    border-color: var(--color-accent);
+    color: black;
+    transform: scale(1.1, 1.1);
+}
+
+#logo {
+    position: fixed;
+    /* left: var(--spacing-h); */
+    left: 0px;
+    top: var(--spacing-h);
+    padding-left: var(--spacing-h);
+    padding-top: var(--spacing-button);
+    padding-right: var(--spacing-button);
+    padding-bottom: var(--spacing-button);
+    border-radius: 0px var(--border-radius) var(--border-radius) 0px;
+    /* width: calc(var(--spacing-text) - (var(--spacing-w) * 2)); */
+    height: 4em;
+    background-color: white;
+    filter: invert(1);
+    cursor: pointer;
+    transition: padding-left 0.5s ease;
+    z-index: 100;
+}
+
+#logo:hover {
+    padding-left: calc(var(--spacing-h) * 2);
+}
+
+
+/* #endregion */
+
+.hori-list {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: var( --spacing-pixel);
+}
+
+.hori-list.expand {
+    justify-content: space-between;
+}

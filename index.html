@@ -6,93 +6,135 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Portfolio Website" />
-    <meta name="title" property="og:title" content="Gabriela Colón-Meléndez" />
-    <meta property="og:type" content="Website" />
-    <meta name="image" property="og:image" content="media/preview.png" />
-    <meta name="description" property="og:description" content="Portfolio Website" />
-    <meta name="author" content="Frank Alfano" />
+    <link rel="stylesheet" href="css/style-base.css">
+    <link rel="stylesheet" href="css/style-main.css">
 
-    <link rel="icon" href="media/gcm-favicon.png">
-
+    <script src="js/main.js"></script>
     <script src="js/custom-elements.js"></script>
 
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/style.css">
-
-    <title>Gabriela Colón-Meléndez</title>
+    <title>DEV WEBSITE</title>
 </head>
 
-<!--
-
-IMAGES TO FIX:
-- ZONA
-- COMMUNITY CYCLE
-- CLC LUMINARY
-- FOLLIES
-- KIRIGAMI
-
-MAKE HEADER FIT ALL ON SMALLER SCREENS
-
--->
-
 <body>
-    <custom-header></custom-header>
-    <div class="header-image">
-        <img style="width: 250px;" src="media/gcm-logo-black.png">
-        <h1>Gabriela Colón-Meléndez</h1>
-    </div>
-    <div class="description">
-        <h2>Hello!</h2>
-        <hr>
+    <img id="logo" onclick="home();" src="logos/gcm-logo.png">
+    <div id="header">
+        <h1>Gabriela Colón-Meléndez.</h1>
         <p>
-            My name is Gabriela Colon-Melendez and I am a third-year Industrial Design student at the Virginia Polytechnic Institute and State University in the College of Architecture, Arts, and Design. This page displays the work and projects I have created or
-            been a part of.
+            Hi! My name is Gaby and I am a third-year Industrial Design student at the Virginia Polytechnic Institute and State University in the College of Architecture, Arts, and Design. This page displays the work and projects I have created or been a part of.
+            <span class="text-accent top right"></span>
+            <span class="text-accent bottom left"></span>
         </p>
+        <div class="hori-list expand">
+            <div class="hori-list">
+                <a class="button" href="mailto:gcolonmelendez@vt.edu"><img src="logos/email-logo.png"></a>
+                <a class="button" href="https://www.instagram.com/gcmdesigns/"><img src="logos/instagram-logo.png"></a>
+                <a class="button" href="https://www.instagram.com/gcmdesigns/"><img src="logos/linkedin-logo.png"></a>
+            </div>
+            <div class="hori-list">
+                <!-- <a class="button" href="">about</a> -->
+                <a class="button" href="projects/Resume.pdf">resume</a>
+            </div>
+        </div>
     </div>
-    <div class="gallery">
-        <a class="gallery-item" style="background-image: url('media/projects/miomedkit/Asset\ 5.png');" href="miomedkit.html">
-            <h1>MioMed Kit</h1>
-            <h3>2022</h3>
-        </a>
-        <a class="gallery-item" style="background-image: url('media/projects/dos/dos.png');" href="dos.html">
-            <h1>DOS</h1>
-            <h3>2022</h3>
-        </a>
-        <a class="gallery-item" style="background-image: url('media/projects/toble/Screenshot_58p.png');" href="toble.html">
-            <h1>Toble</h1>
-            <h3>2022</h3>
-        </a>
-        <a class="gallery-item" style="background-image: url('media/projects/flatware/Gabriela_CM_Final-2.png'); background-size: cover;" href="flatware.html">
-            <h1>Flatware</h1>
-            <h3>2022</h3>
-        </a>
-        <a class="gallery-item" style="background-image: url('media/projects/zona/zona.png');" href="zona.html">
-            <h1>Zona</h1>
-            <h3>2022</h3>
-        </a>
-        <a class="gallery-item" style="background-image: url('media/projects/communitycycle/communitycycle.png');" href="communitycycle.html">
-            <h1>Community Cycle</h1>
-            <h3>2022</h3>
-        </a>
-        <!-- <a class="gallery-item" style="background-image: url('');" href="melorganic.html">
-            <h1>MelOrganic</h1>
-            <h3>2021</h3>
-        </a> -->
-        <a class="gallery-item" style="background-image: url('media/projects/luminary/luminary.png');" href="luminary.html">
-            <h1>CLC Luminary</h1>
-            <h3>2021</h3>
-        </a>
-        <a class="gallery-item" style="background-image: url('media/projects/follies/follies.png');" href="follies.html">
-            <h1>Follies</h1>
-            <h3>2021</h3>
-        </a>
-        <a class="gallery-item" style="background-image: url('media/projects/kirigami/IMG_0091\ \(1\).jpg'); background-size: cover;" href="kirigami.html">
-            <h1>Kirigami</h1>
-            <h3>2021</h3>
-        </a>
+    <div id="content">
+        <gcm-project content="
+            image*1*projects/zona/final short.png|
+            text*1*#D8D4CB*end*end*februrary 2022 - march 2022*h3*zona*h1|
+            text*1*white*start*start*a standalone chair*h1*Zona is a comfortable, cushioned, and spacious stand-alone chair perfect for anything ranging from working from home to relaxing or sleeping! With Zona, the user can assure themselves they've selected a multifunctional piece of furniture that fits in any home because of its modern and cozy design. The deep-set seat allows for comfort for those ranging from 5'2'' to 6'0''.*p*Zona was made in collaboration with Azaria Molina and Luke Benish for a 2nd year IDS studio project and was sponsored by Txtur, a furniture company based in Roanoke, VA who provided many materials/fabrics and insight on the process of creating furniture.*p*This was my first time experimenting with and ultimately creating furniture! The upholstery process was interesting to figure out, and getting to create something from stage 1 until the end was incredibly rewarding. I'm very proud of our final product!*p|
+            image*1*projects/zona/poster.png|
+            image*1*projects/zona/dimensions.png|
+            image*1*projects/zona/final tall.png|
+        ">
+        </gcm-project>
+        <gcm-project content="
+            image*1*projects/go-togo bag/final2.png|
+            text*1*#EAE5E1*end*end*september 2022*h3*go-togo bag*h1|
+            text*1*#EAE5E1*start*start*an essentials bag*h1*The Go-toGo bag is your go-to bag for when you've got to go! This essentials bag has you covered, with a 3-card slot wallet flap, inside pocket, 2 loops for hanging, and a detachable wristlet. There's no longer a need to dig through your backpack, tote bag, or purse when you have the Go-toGo because the loops and clips give you the ability to clip it onto other straps and loops of your main bag in two orientations. If you like carrying it on its own, the detachable wrist strap will be of perfect use! And as an added level of security, the wallet flap can also be flipped over onto itself to hide your cards.*p*This was our second soft goods project of 3rd year IDS and I was extremely happy with my successful prototype. I learned how to sew for this project and I was able to use flat patterns to help with the design.*p|
+            image*1*projects/go-togo bag/final1.png|
+            image*1*projects/go-togo bag/people.png| 
+            image*1*projects/go-togo bag/final trace 1.png|
+            image*2*projects/go-togo bag/final images.png|
+            image*1*projects/go-togo bag/final trace 2.png|
+            text*1*#EAE5E1*start*start*prototypes*h1*I did quite a few rounds of prototyping ranging from paper prototypes for size purposes and for the wallet's flat pattern to a few fabric prototypes as well to understand its form. After some adjustments to my design after creating the sewn fabric prototype, I was able to develop my final flat pattern and design that resulted in my final prototype.*p|
+            image*1*projects/go-togo bag/sketches.png|
+            image*1*projects/go-togo bag/layout.png|
+            image*1*projects/go-togo bag/paper prototype.png|
+            image*1*projects/go-togo bag/prototype1.png|
+            image*2*projects/go-togo bag/flat patterns.png|
+        ">
+        </gcm-project>
+        <gcm-project content="
+            image*1*projects/mindful mirror/entryway.png|
+            text*1*#BCCCD6*end*end*october 2022 - december 2022*h3*mindful mirror*h1|
+            text*1*white*start*start*organized. central. simple.*h1*The Mindful Mirror is the mirror that doesn't let you forget the big things so you can keep enjoying the little things. This is a centralized entryway unit that includes two shelves, five hooks, and a mirrored, digital touchscreen display of a calendar, to-do list, daily/weekly weather, and reminders and notifications. The Mindful Mirror is an excellent addition to any household, whether that be of an independent, family, or someone who may need additional assistance throughout the day.*p|
+            image*1*projects/mindful mirror/hooks.png|
+            embed*1*projects/mindful mirror/presentation.pdf*application/pdf|
+            text*1*#BCCCD6*start*start*collaborators*h1*The Mindful Mirror was made in collaboration with my group mates, Farida Hanna, Jordan Jones, and Caitlin Harhai as well as our collaborator and programmer Frank Alfano. We also received guidance from our professors Ben Kirkland and Martha Sullivan and mentor Carolyn Weaver from SFCS Inc. who also sponsored our groups financially to help create our final prototypes. The Aging in Place project for the third-year IDS studio with the Warm Hearth Village and SFCS Arch has been an annual collaboration for 13 years.*p|
+            image*1*projects/mindful mirror/little shelf.png|
+            image*1*projects/mindful mirror/context2.png|
+            image*1*projects/mindful mirror/context1.png|
+            image*1*projects/mindful mirror/big shelf.png|
+            image*2*projects/mindful mirror/types.png|
+            image*1*projects/mindful mirror/app.png|
+            text*1*#BCCCD6*start*start*the mindful app*h1*The Mindful Mirror has an accompanying app for mobile devices that the owner of the mirror can use to add events or tasks to their mirror from anywhere. The app is also great for other relatives, family members, or caregivers that are granted access to edit and add events to someone's Mindful Mirror.*p*The idea behind the Mindful Mirror came from multiple sit-downs with the Warm Hearth Village, a senior living community. After talking with the residents, my group found common themes of forgetfulness, memory loss, and the struggle to stay organized. From our research, we found that 5.4 million Americans are currently living with Alzheimer's and that 40% of US adults age 65+ have memory impairment associated with age. We also found that 1 in 9 adults ages 45+ report confusion or some degree of memory loss (CDC Subjective Cognitive Decline Among Adults Aged 45+ Years in the United States). The National Institute of Aging announced some great tips for dealing with forgetfulness that included, following a daily routine, planning tasks, making to-do lists, using memory tools like calendars, and putting essentials like wallets, glasses, and keys, in the same spot every day. We took these into strong consideration, and created the Mindful Mirror, which tackles each of those!*p|
+            text*1*white*start*start*final prototype*h1*Ideally, the manufactured product would have a custom computer with the Mindful Mirror program coded into itself, add the display would be its reflective touchscreen monitor. We created a physical semi-works-like, looks-like prototype from ⅝” plywood, 5 hooks, a monitor, a reflective two-way acrylic mirror, a raspberry pi, and an infrared touchscreen frame.*p|
+            image*1*projects/mindful mirror/katie.png|
+            image*2*projects/mindful mirror/prototypes.png|
+            ">
+        </gcm-project>
+        <gcm-project content="
+            image*1*projects/miomedkit/final.png|
+            text*1*#E5EAC7*end*end*august 2022 - september 2022*h3*miomedkit*h1|
+            text*1*white*start*start*a hygiene/first aid kit*h1*The MioMed bag is a durable, portable, and water-resistant personal hygiene/first aid kit. The MioMed bag has one large compartment, three medium-sized compartments, a side pocket perfectly sized for a Narcan, 5 mesh pockets varying in size on the back, and a couple of loops for thinner objects. The bag has a nylon adjustable strap with a rubber handle for easy carrying.*p*It also has two clips in the back that attach to its connecting clips that are inside of the backpack. The front of the kit has a mesh pocket and two clear pockets perfect for the resource card provided to the recipient from C2C as well as an informational packet. That packet is an illustrated General First Aid treatment booklet that has information on how to treat the most common injuries. There is also ample room inside of the bag for the revive kit and sharps containers that are often provided or offered.*p|
+            image*1*projects/miomedkit/man.png|
+            embed*1*projects/miomedkit/presentation.pdf*application/pdf|
+            text*1*white*center*start*For this project, the 3rd year VTID studio class worked with C2C (Connection to Care) and Dynovis to ideate and create first aid kits to implement into care bags that were created for those in need. This was a very rapid prototyping process! This was my first experience working with soft goods and I learned so much. I created this bag with the idea that the pieces would be welded together as explained to us was possible by Dynovois, the manufacturer. I learned that a flat pattern is necessary even if there will be little sewing. I only had loose sketches and measurements when creating the MioMed Bag so after learning this, for our next soft goods project, I was sure to include and use flat patterns to assist in my design process.*p|
+            image*1*projects/miomedkit/closed.png|
+            image*1*projects/miomedkit/open.png|
+            ">
+        </gcm-project>
+        <gcm-project content="
+            image*1*projects/toble/final1.png|
+            text*1*#FFFFD8*end*end*april 2022 - may 2022*h3*toble*h1|
+            text*1*white*start*start*a doble tostonera*h1*Toble is a double (doble) Tostonera, an enhancement of the Tostonera, a traditional Puerto Rican wooden tool used to create tostones (plantain slices that are fried twice). Tostonera's are normally two blocks of wood that flatten together through the use of hinges. Usually, one block of wood has a hemisphere, and the other has a curved out section to allow for the hemisphere to sit and shape the tostones. There are other designs for tostoneras that produce flat tostones. I decided to combine both ideas into one to have an option for curved/cupped tostones, and when flipped there's a side to produce flatter-shaped tostones.*p*This was a project for my 2nd year IDS studio class and although this product does not stir, scrape, or scoop, (I asked for permission!) it does successfully redesign a unique kitchen tool that is close to my heart and culture.*p|
+            image*1*projects/toble/final2.png|
+            image*2*projects/toble/poster.png|
+            ">
+        </gcm-project>
+        <gcm-project content="
+            image*1*projects/flatware/render2.png|
+            text*1*#F2F2F2*end*end*may 2022*h3*flatware*h1|
+            text*1*#F2F2F2*start*start*a modern utensil set*h1*This flatware set was a result of a final project for a Computer Aided Industrial Design course. We were instructed to model a set of flatware with visually and form related utensils.*p*I decided to make a modern set with wooden inlays in the 3 main utensils, the knife, fork, and spoon. As for the additional utensils, I decided on a wooden spoon with teeth, as well as wooden tongs. The wooden accents on the metal utensils brought the whole set together. This project was a great way to practice and showcase what I've learned throughout the course.*p|
+            image*1*projects/flatware/render1.png|
+            image*1*projects/flatware/fork.png|
+            image*1*projects/flatware/spoon.png|
+            image*1*projects/flatware/knife.png|
+            image*1*projects/flatware/tongs.png|
+            image*1*projects/flatware/cool spoon.png|
+            image*1*projects/flatware/render3.png|
+        ">
+        </gcm-project>
+        <gcm-project content="
+            image*1*projects/dos/dos.png|
+            text*1*white*end*end*july 2022*h3*dos*h1|
+            text*1*white*start*start*a roll of the dice*h1*DOS (two in Spanish) is a single-player puzzle game where the objective is to strategically roll the die to get the two-face on top! There are a few special tiles that allow for more complex movement of the die which adds a new layer to the puzzles. Some tiles only allow a certain face of the die to be on that tile, and prevent the player from moving onto that tile if the face is not correct. Others rotate or move the die in a certain direction. There is no 'end' to each level, the player just needs to get the two-face on top by any means necessary.*p*This game was created for the 2022 Game Maker's Toolkit 48 Hour Game Jam. This year the theme was ‘Roll of the Dice', and I came up with the idea to take the theme more literally by making the player a physical die that rolls around. We would come to realize that this was the most common interpretation of the theme, but nonetheless the mechanics stand out a bit against the rest. Since this game was made for a game jam, we wanted the mechanics to be as intuitive as possible with very simple visuals. In addition to ideation and general level design, I more specifically worked on graphics, the texture of the dice, the design of the action tiles, as well as the logo design. We created everything besides the music and sound effects for the game, and our game placed in the top 5% of over 6200 submissions.*p|
+            image*1*projects/dos/tiles.png|
+            image*1*projects/dos/logo.png|
+            iframe*1*https://www.youtube.com/embed/11NYDRNQM4A|
+        ">
+        </gcm-project>
     </div>
-    <div class="description"></div>
+    <div id="sidebar">
+        <div class="thumbnails">
+            <img class="thumbnail" onclick="view();" onmouseenter="preview(2);" onmouseleave="preview(-1);" src="thumbnails/mindfulmirror-thumbnail.png">
+            <img class="thumbnail" onclick="view();" onmouseenter="preview(1);" onmouseleave="preview(-1);" src="thumbnails/bag-thumbnail.png">
+            <img class="thumbnail" onclick="view();" onmouseenter="preview(6);" onmouseleave="preview(-1);" src="thumbnails/dos-thumbnail.png">
+            <img class="thumbnail" onclick="view();" onmouseenter="preview(3);" onmouseleave="preview(-1);" src="thumbnails/miomed-thumbnail.png">
+            <img class="thumbnail" onclick="view();" onmouseenter="preview(4);" onmouseleave="preview(-1);" src="thumbnails/toble-thumbnail.png">
+            <img class="thumbnail" onclick="view();" onmouseenter="preview(5);" onmouseleave="preview(-1);" src="thumbnails/flatware-thumbnail.png">
+            <img class="thumbnail" onclick="view();" onmouseenter="preview(0);" onmouseleave="preview(-1);" src="thumbnails/zona-thumbnail.png">
+        </div>
+    </div>
 </body>
 
 </html>
