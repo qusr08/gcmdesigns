@@ -127,11 +127,12 @@ a {
     transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.5s ease;
 }
 
-.button>img {
+.button>svg {
     height: 1.5em;
     aspect-ratio: 1;
     object-fit: contain;
-    filter: invert(1);
+    fill: var(--color-accent);
+    transition: fill 0.2s ease;
 }
 
 .button:hover {
@@ -139,6 +140,10 @@ a {
     border-color: var(--color-accent);
     color: black;
     transform: scale(1.1, 1.1);
+}
+
+.button:hover>svg {
+    fill: black;
 }
 
 #logo {

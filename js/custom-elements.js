@@ -69,7 +69,7 @@ window.customElements.define('gcm-project', class extends HTMLElement {
 
                         // If the text style is set to h3, add a text accent
                         if (elementParameters[j + 1] == 'h3') {
-                            text.innerHTML += `<span class="text-accent top left" style="border-color: white;"></span>`;
+                            text.innerHTML += `<span class="text-accent top left" style="border-color: black;"></span>`;
                         }
 
                         div.appendChild(text);

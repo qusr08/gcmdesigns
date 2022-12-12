@@ -61,6 +61,8 @@ function home() {
     removeClass(header, 'view');
     removeClass(content, 'view');
     removeClass(sidebar, 'view');
+
+    content.scrollTop = 0;
 }
 
 function addClass(element, className) {

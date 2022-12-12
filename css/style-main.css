@@ -6,6 +6,7 @@
     left: 0px;
     overflow: hidden;
     background-color: var(--color-lighter);
+    scroll-behavior: smooth;
     transition: width var(--transition) ease, height var(--transition) ease;
 }
 
@@ -74,22 +75,23 @@
 
 .thumbnail:hover {
     filter: drop-shadow(0px 0px 10px darkgray);
-    animation: thumbnail-hover 4s infinite linear;
+    /* Need to fix this not smoothly transitioning */
+    animation: 4s thumbnail-hover 0s infinite normal forwards running ease-in-out;
 }
 
 @keyframes thumbnail-hover {
     25% {
         transform: rotate(2deg);
     }
-    50% {
+    /* 50% {
         transform: rotate(0deg);
-    }
+    } */
     75% {
         transform: rotate(-2deg);
     }
-    100% {
+    /* 100% {
         transform: rotate(0deg);
-    }
+    } */
 }
 
 
@@ -105,15 +107,18 @@ gcm-project {
     left: 0px;
     z-index: initial;
     display: grid;
+    visibility: hidden;
     grid-template-columns: repeat(2, 50%);
     grid-template-rows: repeat(0, calc(100vh - var(--header-h)));
-    transition: var(--transition) ease, z-index 0s step-start, grid-template-rows var(--transition) ease;
+    transition: top var(--transition) ease, z-index 0s step-start, grid-template-rows var(--transition) ease, visibility 0s step-start var(--transition);
 }
 
 gcm-project.preview,
 gcm-project.view {
+    visibility: visible;
     top: 0px;
     z-index: 10;
+    transition: top var(--transition) ease, z-index 0s step-start, grid-template-rows var(--transition) ease, visibility 0s step-start;
 }
 
 gcm-project.none {
