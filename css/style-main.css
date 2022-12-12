@@ -10,11 +10,12 @@
     transition: width var(--transition) ease, height var(--transition) ease;
 }
 
-#content.view {
+
+/* #content.view {
     width: 100%;
     height: 100vh;
     overflow-y: scroll;
-}
+} */
 
 #header {
     position: fixed;
@@ -32,9 +33,10 @@
     transition: top var(--transition) ease;
 }
 
-#header.view {
+
+/* #header.view {
     top: calc(var(--header-h) * -1);
-}
+} */
 
 #sidebar {
     position: fixed;
@@ -50,9 +52,10 @@
     transition: right var(--transition) ease;
 }
 
-#sidebar.view {
+
+/* #sidebar.view {
     right: calc((var(--spacing-w) * -2) - (100vw - var(--header-w)));
-}
+} */
 
 
 /* #region Thumbnails */
@@ -76,22 +79,22 @@
 .thumbnail:hover {
     filter: drop-shadow(0px 0px 10px darkgray);
     /* Need to fix this not smoothly transitioning */
-    animation: 4s thumbnail-hover 0s infinite normal forwards running ease-in-out;
+    animation: thumbnail-hover 4s infinite linear;
 }
 
 @keyframes thumbnail-hover {
     25% {
         transform: rotate(2deg);
     }
-    /* 50% {
+    50% {
         transform: rotate(0deg);
-    } */
+    }
     75% {
         transform: rotate(-2deg);
     }
-    /* 100% {
+    100% {
         transform: rotate(0deg);
-    } */
+    }
 }
 
 
@@ -103,17 +106,48 @@
 gcm-project {
     position: absolute;
     width: 100%;
+    height: calc(100vh - var(--header-h));
     top: calc(100vh - var(--header-h));
     left: 0px;
     z-index: initial;
     display: grid;
-    visibility: hidden;
     grid-template-columns: repeat(2, 50%);
-    grid-template-rows: repeat(0, calc(100vh - var(--header-h)));
-    transition: top var(--transition) ease, z-index 0s step-start, grid-template-rows var(--transition) ease, visibility 0s step-start var(--transition);
+    grid-template-rows: calc(100vh - var(--header-h));
+    transition: top var(--transition) ease, z-index 0s step-start;
 }
 
-gcm-project.preview,
+gcm-project>* {
+    position: relative;
+    width: 90%;
+    height: calc((100vh - var(--header-h)) * 0.9);
+    padding: calc((100vh - var(--header-h)) * 0.05) 5% calc((100vh - var(--header-h)) * 0.05) 5%;
+}
+
+gcm-project.preview {
+    top: 0px;
+    z-index: 10;
+}
+
+gcm-project.view {
+    position: relative;
+    top: 0px;
+    /* position: absolute; */
+    width: 100%;
+    /* top: calc(100vh - var(--header-h)); */
+    /* left: 0px; */
+    /* z-index: initial; */
+    display: grid;
+    /* visibility: hidden; */
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: unset;
+    /* grid-template-rows: repeat(0, calc(100vh - var(--header-h))); */
+    grid-auto-rows: 85vh;
+    transition: none;
+    /* transition: top var(--transition) ease, z-index 0s step-start, grid-template-rows var(--transition) ease, visibility 0s step-start var(--transition); */
+}
+
+
+/* gcm-project.preview,
 gcm-project.view {
     visibility: visible;
     top: 0px;
@@ -123,12 +157,12 @@ gcm-project.view {
 
 gcm-project.none {
     display: none;
-}
+} */
 
-gcm-project>* {
+gcm-project.view>* {
     width: 90%;
-    height: 90%;
-    padding: 5%;
+    height: calc(85vh * 0.9);
+    padding: calc(85vh * 0.05) 5% calc(85vh * 0.05) 5%;
 }
 
 gcm-project>span {
@@ -140,14 +174,14 @@ gcm-project>span {
 gcm-project>div {
     display: flex;
     flex-flow: column nowrap;
-    gap: 5%;
+    gap: 2.5%;
 }
 
-gcm-project>embed,
-gcm-project>iframe {
+gcm-project.view>embed,
+gcm-project.view>iframe {
     width: 100%;
     height: 100%;
-    padding: 0%;
+    padding: 0px;
 }
 
 

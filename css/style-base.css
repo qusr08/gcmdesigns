@@ -74,6 +74,15 @@ a {
     position: relative;
     font-size: 1.2em;
     z-index: 5;
+    text-decoration: none;
+}
+
+.caption {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    padding: var(--spacing-button);
+    /* background-color: var(--color-lighter); */
 }
 
 .text-accent {

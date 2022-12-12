@@ -16,9 +16,9 @@ function preview(index) {
     if (selectedProject != undefined) {
         // If the currently selected project contains the view class, do not change anything
         // We want to continue to display the project
-        if (selectedProject.classList.contains('view')) {
-            return;
-        }
+        // if (selectedProject.classList.contains('view')) {
+        //     return;
+        // }
 
         removeClass(selectedProject, 'preview');
     }
@@ -34,35 +34,34 @@ function preview(index) {
 
 function view() {
     // Make sure the selected project is visible and all other projects are hidden
-    for (let i = 0; i < projects.length; i++) {
-        if (projects[i] == selectedProject) {
-            addClass(projects[i], 'view');
-        } else {
-            addClass(projects[i], 'none');
-        }
-    }
+    // for (let i = 0; i < projects.length; i++) {
+    //     if (projects[i] == selectedProject) {
+    //         addClass(projects[i], 'view');
+    //     } else {
+    //         addClass(projects[i], 'none');
+    //     }
+    // }
 
-    addClass(header, 'view');
-    addClass(content, 'view');
-    addClass(sidebar, 'view');
+    // addClass(header, 'view');
+    // addClass(content, 'view');
+    // addClass(sidebar, 'view');
     // removeClass(selectedProject, 'preview');
 }
 
 function home() {
     // Make sure all project visiblity is reset
-    for (let i = 0; i < projects.length; i++) {
-        if (projects[i] == selectedProject) {
-            removeClass(projects[i], 'view');
-        } else {
-            removeClass(projects[i], 'none');
-        }
-    }
+    // for (let i = 0; i < projects.length; i++) {
+    //     if (projects[i] == selectedProject) {
+    //         removeClass(projects[i], 'view');
+    //     } else {
+    //         removeClass(projects[i], 'none');
+    //     }
+    // }
 
-    removeClass(header, 'view');
-    removeClass(content, 'view');
-    removeClass(sidebar, 'view');
-
-    content.scrollTop = 0;
+    // removeClass(header, 'view');
+    // removeClass(content, 'view');
+    // removeClass(sidebar, 'view');
+    // content.scrollTop = 0;
 }
 
 function addClass(element, className) {
