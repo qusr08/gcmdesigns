@@ -42,13 +42,17 @@ body {
 } */
 
 .info-wrapper {
-    max-width: 50vw;
+    max-width: 66vw;
     padding: var(--padding);
     height: calc(100% - (var(--padding) * 2));
     display: flex;
     flex-flow: column nowrap;
     gap: var(--gap);
     text-align: justify;
+}
+
+.info-wrapper h1 {
+    text-align: left;
 }
 
 .about-collapsible {

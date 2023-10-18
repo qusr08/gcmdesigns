@@ -14,7 +14,7 @@ function toggleAboutPage() {
 
     // Set body styles
     document.body.style.transition = aboutToggle ? `grid-template-columns ${transitionTime}s ease-in-out` : `grid-template-columns ${transitionTime}s ease-in-out`;
-    document.body.style.gridTemplateColumns = aboutToggle ? "1fr 1fr" : "1fr 2fr";
+    document.body.style.gridTemplateColumns = aboutToggle ? "1fr 0fr" : "1fr 2fr";
 
     // Set about button styles
     const buttonElement = wrapperElement.querySelector(".about-button");
