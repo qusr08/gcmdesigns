@@ -3,29 +3,24 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="css/style-base.css">
-    <link rel="stylesheet" href="css/style-main.css">
+    <link rel="stylesheet" href="css/baseStyle.css">
+    <link rel="stylesheet" href="css/projectStyle.css">
 
     <script src="js/main.js"></script>
-    <script src="js/custom-elements.js"></script>
 
-    <title>DOS</title>
+    <title>DOS - Gabriela Colón-Meléndez</title>
 </head>
 
-<body>
-    <gcm-logo></gcm-logo>
-    <gcm-project class="view" content="
-        image*1*projects/dos/dos.png|
-        text*1*white*end*end*july 2022*h3*dos*h1|
-        text*1*white*start*start*a roll of the dice*h1*DOS (two in Spanish) is a single-player puzzle game where the objective is to strategically roll the die to get the two-face on top! There are a few special tiles that allow for more complex movement of the die which adds a new layer to the puzzles. Some tiles only allow a certain face of the die to be on that tile, and prevent the player from moving onto that tile if the face is not correct. Others rotate or move the die in a certain direction. There is no 'end' to each level, the player just needs to get the two-face on top by any means necessary.*p*This game was created for the 2022 Game Maker's Toolkit 48 Hour Game Jam. This year the theme was ‘Roll of the Dice', and I came up with the idea to take the theme more literally by making the player a physical die that rolls around. We would come to realize that this was the most common interpretation of the theme, but nonetheless the mechanics stand out a bit against the rest. Since this game was made for a game jam, we wanted the mechanics to be as intuitive as possible with very simple visuals. In addition to ideation and general level design, I more specifically worked on graphics, the texture of the dice, the design of the action tiles, as well as the logo design. We created everything besides the music and sound effects for the game, and our game placed in the top 5% of over 6200 submissions.*p|
-        image*1*projects/dos/tiles.png|
-        image*1*projects/dos/logo.png|
-        iframe*1*https://www.youtube.com/embed/11NYDRNQM4A|
-    ">
-    </gcm-project>
+<body class="dos">
+    <div class="slide row-1 col-1">
+        <div class="cover-image" style="align-items: end; background-image: url('png/dos/thumbnail-dos.png');">
+            <img class="project-logo" src="png/dos/logo-dos.png" alt="DOS">
+            <h2>july 2022</h2>
+            <h3>gmtk game jam</h3>
+        </div>
+    </div>
 </body>
 
 </html>

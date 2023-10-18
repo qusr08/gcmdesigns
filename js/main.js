@@ -1,73 +1,32 @@
-let header = undefined;
-let content = undefined;
-let sidebar = undefined;
-let projects = undefined;
-let selectedProject = undefined;
+"use strict";
 
-window.onload = function(event) {
-    header = document.getElementById('header');
-    content = document.getElementById('content');
-    sidebar = document.getElementById('sidebar');
-    projects = document.getElementsByTagName('gcm-project');
+let aboutToggle = false;
+
+function toggleAboutPage() {
+    // Swap the value of the about toggle
+    aboutToggle = !aboutToggle;
+
+    // Get the wrapper element
+    const wrapperElement = document.querySelector(".info-wrapper");
+
+    // Get CSS variables
+    const transitionTime = parseFloat(getComputedStyle(document.documentElement).getPropertyValue('--transition-time'));
+
+    // Set body styles
+    document.body.style.transition = aboutToggle ? `grid-template-columns ${transitionTime}s ease-in-out` : `grid-template-columns ${transitionTime}s ease-in-out`;
+    document.body.style.gridTemplateColumns = aboutToggle ? "1fr 1fr" : "1fr 2fr";
+
+    // Set about button styles
+    const buttonElement = wrapperElement.querySelector(".about-button");
+    buttonElement.querySelector("a").innerHTML = aboutToggle ? "less about me" : "more about me";
+    buttonElement.querySelector("b").style.transform = `rotateZ(${aboutToggle ? "-180deg" : "0deg"})`;
+    
+    // Set collapsible element styles
+    const collapsibleElement = wrapperElement.querySelector(".about-collapsible");
+    collapsibleElement.style.transition = aboutToggle ? `max-height ${transitionTime}s ease-in-out` : `max-height ${transitionTime}s ease-in-out`;
+    collapsibleElement.style.maxHeight = aboutToggle ? collapsibleElement.scrollHeight + "px" : null;
 }
 
-function preview(index) {
-    // If the selected project is not undefined, a project is currently selected
-    if (selectedProject != undefined) {
-        // If the currently selected project contains the view class, do not change anything
-        // We want to continue to display the project
-        // if (selectedProject.classList.contains('view')) {
-        //     return;
-        // }
-
-        removeClass(selectedProject, 'preview');
-    }
-
-    // If a valid index was given, select that project
-    if (index < 0 || index >= projects.length) {
-        selectedProject = undefined;
-    } else {
-        selectedProject = projects[index];
-        addClass(selectedProject, 'preview');
-    }
-}
-
-function view() {
-    // Make sure the selected project is visible and all other projects are hidden
-    // for (let i = 0; i < projects.length; i++) {
-    //     if (projects[i] == selectedProject) {
-    //         addClass(projects[i], 'view');
-    //     } else {
-    //         addClass(projects[i], 'none');
-    //     }
-    // }
-
-    // addClass(header, 'view');
-    // addClass(content, 'view');
-    // addClass(sidebar, 'view');
-    // removeClass(selectedProject, 'preview');
-}
-
-function home() {
-    // Make sure all project visiblity is reset
-    // for (let i = 0; i < projects.length; i++) {
-    //     if (projects[i] == selectedProject) {
-    //         removeClass(projects[i], 'view');
-    //     } else {
-    //         removeClass(projects[i], 'none');
-    //     }
-    // }
-
-    // removeClass(header, 'view');
-    // removeClass(content, 'view');
-    // removeClass(sidebar, 'view');
-    // content.scrollTop = 0;
-}
-
-function addClass(element, className) {
-    element.classList.add(className);
-}
-
-function removeClass(element, className) {
-    element.classList.remove(className);
+function goToSite (url) {
+    window.location.href = url;
 }

@@ -1,0 +1,126 @@
+body {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    overflow: hidden;
+    font-family: "Inter", sans-serif;
+    background-color: white;
+    position: relative;
+}
+
+/* #region Buttons */
+
+.text-button {
+    font-weight: bold;
+    cursor: pointer;
+    transition: letter-spacing calc(var(--transition-time) / 2) ease;
+}
+
+.text-button:hover {
+    letter-spacing: 2px;
+    text-decoration: underline;
+}
+
+/* #endregion */
+
+/* #region Info Container */
+
+.info-container {
+    position: relative;
+}
+
+/* .triangle {
+    position: absolute;
+    background-color: white;
+    transform: rotateZ(45deg);
+    width: 50px;
+    height: 50px;
+    right: calc(-50px / 2);
+    top: calc(50% - (50px / 2));
+    z-index: 100;
+    border-radius: 0px 10px;
+} */
+
+.info-wrapper {
+    max-width: 50vw;
+    padding: var(--padding);
+    height: calc(100% - (var(--padding) * 2));
+    display: flex;
+    flex-flow: column nowrap;
+    gap: var(--gap);
+    text-align: justify;
+}
+
+.about-collapsible {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: var(--gap);
+    max-height: 0px;
+    overflow: hidden;
+}
+
+.about-button {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 4px;
+}
+
+.about-button>b {
+    transition: transform var(--transition-time) ease-in-out;
+}
+
+.info-links {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: start;
+    text-align: center;
+    gap: var(--gap);
+}
+
+/* #endregion */
+
+/* #region Project Container */
+
+.projects-container {
+    overflow: hidden scroll;
+}
+
+.projects-list {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.project-card {
+    height: calc(60vh - (var(--padding) * 2));
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: end;
+    padding: var(--padding);
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+}
+
+/* #endregion */
+
+@media screen and (max-width: 800px) {
+    body {
+        height: unset;
+        display: flex;
+        flex-flow: column nowrap;
+        overflow: hidden scroll;
+    }
+
+    .info-wrapper {
+        max-width: unset;
+    }
+
+    .projects-container {
+        overflow: hidden;
+    }
+
+    .project-card {
+        height: calc(30vh - (var(--padding) * 2));
+    }
+}
