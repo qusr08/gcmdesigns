@@ -95,7 +95,7 @@ body {
 }
 
 .project-card {
-    height: calc(60vh - (var(--padding) * 2));
+    height: calc(70vh - (var(--padding) * 2));
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
