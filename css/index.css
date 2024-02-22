@@ -382,7 +382,7 @@ gcm-home-tab:hover {
 .text-button,
 .svg-button {
     transition: transform 0.2s ease, font-weight 0.2s ease;
-    white-space: nowrap;
+    /* white-space: nowrap; */
     /* padding: 5px 10px; */
     /* background-color: #0000000d; */
     /* font-size: 20px; */
@@ -642,19 +642,34 @@ gcm-home-tab:hover {
 
 /* #endregion */
 
+/* #region Image Grid */
+
+.image-grid-2,
+.image-grid-3 {
+    display: grid;
+    gap: min(1vh, 1vw);
+}
+
+.image-grid-2 {
+    grid-template-columns: 1fr 1fr;
+}
+
+.image-grid-3 {
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.image-grid-2>img,
+.image-grid-3>img {
+    width: 100%;
+}
+
+/* #endregion */
+
 .horizontal-list {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     gap: min(1vh, 1vw);
-}
-
-.image-2>img {
-    width: calc(50% - min(1vh, 1vw) / 2);
-}
-
-.image-3>img {
-    width: calc(33.096% - min(1vh, 1vw) / 3);
 }
 
 .drop-shadow {
