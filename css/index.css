@@ -705,7 +705,9 @@ gcm-home-tab:hover {
 
     .slideshow-list,
     .arrow-container-left,
-    .arrow-container-right {
+    .arrow-container-right,
+    .scroll-text-parent,
+    .mouse-text {
         display: none;
     }
 
