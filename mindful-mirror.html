@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/index.css">
+
+    <script src="js/custom-elements.js"></script>
+    <script src="js/index.js"></script>
+
+    <style>
+        ::-webkit-scrollbar-track {
+            background-color: var(--mm-color-light);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: var(--mm-color-medium);
+        }
+    </style>
+
+    <title>Mindful Mirror - Gabriela Colón-Meléndez</title>
+</head>
+
+<body>
+    <gcm-home-tab class="mm-background-medium mm-color-dark"></gcm-home-tab>
+    <div class="full-section">
+        <div class="scroll-text-parent mm-color-light">
+            <p class="scroll-text" text="mindful mirror"></p>
+            <p class="scroll-text" text="mindful mirror"></p>
+            <p class="scroll-text" text="mindful mirror"></p>
+            <p class="scroll-text" text="mindful mirror"></p>
+            <p class="scroll-text" text="mindful mirror"></p>
+            <p class="scroll-text" text="mindful mirror"></p>
+            <p class="scroll-text" text="mindful mirror"></p>
+            <p class="scroll-text" text="mindful mirror"></p>
+        </div>
+        <div class="full-content project-header mm-background-light mm-color-dark">
+            <img class="project-logo" src="png/mindful-mirror/mm-logo.png">
+            <p>An entryway product to help the aging population stay organized</p>
+            <p>Oct 2022 - Dec 2022</p>
+            <img class="project-render drop-shadow" src="png/mindful-mirror/mm-product.png">
+            <div class="down-arrow"></div>
+        </div>
+    </div>
+    <div class="fit-section mm-color-dark">
+        <div class="max-content">
+            <div class="block-list">
+                <p class="mm-background-light">Woodworking</p>
+                <p class="mm-background-light">SolidWorks</p>
+                <p class="mm-background-light">Figma UI and Prototyping</p>
+                <p class="mm-background-light">Physical Prototyping</p>
+                <p class="mm-background-light">Research and Feedback Interviews with Users</p>
+            </div>
+        </div>
+    </div>
+    <div class="fit-section mm-color-dark">
+        <div class="max-content">
+            <div class="horizontal-list">
+                <h1>Teammates:</h1>
+                <p>Farida Hannah, Jordan Jones</p>
+            </div>
+            <div class="horizontal-list">
+                <h1>Collaborator:</h1>
+                <p>Frank Alfano</p>
+            </div>
+            <!-- <div class="horizontal-list">
+                <h1>Sponsor:</h1>
+                <p>SFCS Architects</p>
+            </div> -->
+            <div class="horizontal-list">
+                <h1>Mentor:</h1>
+                <p>Carolyn Weaver</p>
+            </div>
+            <div class="horizontal-list">
+                <h1>Professors:</h1>
+                <p>Ben Kirkland, Martha Sullivan</p>
+            </div>
+            <div class="horizontal-list">
+                <a class="text-button mm-background-light mm-color-dark" href="https://news.vt.edu/articles/2022/10/cm-designsforaginginplace.html">Designing Help for Aging in Place Article</a>
+                <a class="text-button mm-background-light mm-color-dark" href="https://www.sfcs.com/news/sfcs-by-design-2023-sfcs-students-seniors-studies-for-the-future-of-senior-living">SFCS By Design 2023 Article</a>
+            </div>
+        </div>
+    </div>
+    <div class="fit-section">
+        <div class="max-content logo-list">
+            <img src="png/sfcs-logo.png">
+            <img src="png/whv-logo.png">
+        </div>
+    </div>
+    <div class="fit-section mm-color-dark">
+        <div class="max-content">
+            <p>The VTID program partnered with Warm Hearth Village senior living residents to identify design opportunities to improve their quality of life and living spaces. Our group identified memory loss and forgetfulness as main pain points and worked under the mentorship and sponsorship of SFCS Architects to complete our project the Mindful Mirror. The Mindful Mirror is an entryway smart mirror that displays daily events & tasks on a touch screen display and has shelves and hooks for all your important next-to-the-door type items. With its accompanying app, the owner or trusted friends and relatives can access, edit, and send reminders from anywhere!</p>
+            <p>I was responsible for the modeling and rendering on Solidworks of the Mindful Mirrors multiple iterations before and including the final. I also researched and solidified the plan for the physical prototype, finding the specific materials we would need in order for it ot be works-like looks-like product. Our group worked together on research, ideation, creating the UI elements, and the creation and assembly of the final prototype.</p>
+        </div>
+    </div>
+    <div class="fit-section slideshow">
+        <div class="max-content">
+            <a class="slideshow-button text-button mm-background-light mm-color-dark" href="pdf/mm-processbook.pdf">Open Process Book PDF</a>
+            <div class="slideshow-list drop-shadow">
+                <img src="pdf/mm-processbook/01.png">
+                <img src="pdf/mm-processbook/02.png">
+                <img src="pdf/mm-processbook/03.png">
+                <img src="pdf/mm-processbook/04.png">
+                <img src="pdf/mm-processbook/05.png">
+                <img src="pdf/mm-processbook/06.png">
+                <img src="pdf/mm-processbook/07.png">
+                <img src="pdf/mm-processbook/08.png">
+                <img src="pdf/mm-processbook/09.png">
+                <img src="pdf/mm-processbook/10.png">
+            </div>
+            <div class="arrow-container-right" onclick="moveSlideshow(this, 1);">
+                <div class="right-arrow mm-color-medium"></div>
+            </div>
+            <div class="arrow-container-left" onclick="moveSlideshow(this, -1);">
+                <div class="left-arrow mm-color-medium"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

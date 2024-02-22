@@ -5,63 +5,124 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="css/baseStyle.css">
-    <link rel="stylesheet" href="css/projectStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 
-    <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+
+    <script src="js/custom-elements.js"></script>
+    <script src="js/index.js"></script>
+
+    <style>
+        ::-webkit-scrollbar-track {
+            background-color: var(--rs-color-light);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background-color: var(--rs-color-medium);
+        }
+    </style>
 
     <title>Ridesafe - Gabriela Colón-Meléndez</title>
 </head>
 
-<body class="ridesafe">
-    <div class="slide row-1 col-1">
-        <div class="cover-image" style="align-items: end; background-image: linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,0.35), white), url('png/ridesafe/thumbnail-ridesafe.png');">
-            <img class="project-logo" src="png/ridesafe/logo-ridesafe.png" alt="Ridesafe">
-            <h2>feb 2023 - apr 2023</h2>
-            <h3>general motors</h3>
+<body>
+    <gcm-home-tab class="rs-background-medium rs-color-light"></gcm-home-tab>
+    <div class="full-section">
+        <div class="scroll-text-parent rs-color-light">
+            <p class="scroll-text" text="ridesafe"></p>
+            <p class="scroll-text" text="ridesafe"></p>
+            <p class="scroll-text" text="ridesafe"></p>
+            <p class="scroll-text" text="ridesafe"></p>
+            <p class="scroll-text" text="ridesafe"></p>
+            <p class="scroll-text" text="ridesafe"></p>
+            <p class="scroll-text" text="ridesafe"></p>
+            <p class="scroll-text" text="ridesafe"></p>
+        </div>
+        <div class="full-content project-header rs-background-light rs-color-dark" style="transform: unset;">
+            <img class="project-logo" src="png/ridesafe/rs-logo.png">
+            <p>Threefold timeline proposal of innovative suggestions that highlight the future of safety and accessibility in rideshare for the General Motors company</p>
+            <p>Feb 2023 - Apr 2023</p>
+            <!-- <img class="project-render drop-shadow" src="png/ridesafe/rs-product.png"> -->
+            <div class="down-arrow"></div>
         </div>
     </div>
-    <div class="slide row-1 col-3">
-        <div class="rowspan-1 colspan-1 center-image" style="background-image: url('png/ridesafe/stacked\ cars.png'); background-color: white;"></div>
-        <div class="rowspan-1 colspan-2">
-            <h1 class="project-header">innovating rideshare.</h1>
-            <p>The RideSafe system is a product of a collaboration between Virginia Tech Industrial Design and General Motors. In spring of 2023 VTID collaborated with General Motors to cultivate accessible innovation in the auto industry. Our team researched the lack of accessibility, safety, and adaptive measures in rideshare services. RideSafe is a threefold timeline proposal of innovative suggestions that highlight the future of safety and accessibility in rideshare for the General Motors company.</p>
-            <img src="png/ridesafe/34.png" style="width: 60%; align-self: start;">
+    <div class="fit-section rs-color-light">
+        <div class="max-content">
+            <div class="block-list">
+                <p class="rs-background-medium">Illustrator</p>
+                <p class="rs-background-medium">Figma UI</p>
+                <p class="rs-background-medium">Research and Interviews with Users</p>
+                <p class="rs-background-medium">Photoshop</p>
+            </div>
         </div>
     </div>
-    <div class="slide row-1 col-3">
-        <div class="rowspan-1 colspan-1">
-            <h1 class="project-header">timeline.</h1>
-            <p>Each stage of the RideSafe program has three highlighted features: one that focuses on unlocking/entering the vehicle, one for a passenger display with safety features, and finally an innovated driver display that aids and improves their experience as well. In rideshare services, there are concerns for safety for both the driver and passenger. In these key features we aim to adapt and innovate the most common areas that are lacking in accessibility and safety.</p>
+    <div class="fit-section rs-color-dark">
+        <div class="max-content">
+            <div class="horizontal-list">
+                <h1>Teammates:</h1>
+                <p>Isabelle Patrick, Michael Silverman, Aidan O'Driscoll, Meriel Carney, and Stefaan Meinert</p>
+            </div>
+            <!-- <div class="horizontal-list">
+                <h1>Collaborator:</h1>
+                <p>General Motors</p>
+            </div> -->
+            <div class="horizontal-list">
+                <h1>Professors:</h1>
+                <p>Ben Kirkland, Martha Sullivan</p>
+            </div>
+            <div class="horizontal-list">
+                <a class="text-button rs-background-medium rs-color-light" href="https://news.vt.edu/articles/2023/10/aad-industrial-design-students-gm.html ">VT General Motors Collaboration Article</a>
+            </div>
         </div>
-        <div class="rowspan-1 colspan-2 center-image" style="background-image: url('png/ridesafe/33.png'); background-color: white;"></div>
     </div>
-    <div class="slide row-2 col-2">
-        <div class="rowspan-1 colspan-1 center-image" style="background-image: url('png/ridesafe/onstar\ now.png'); background-color: white;"></div>
-        <div class="rowspan-1 colspan-1" style="background-color: white;">
-            <p>The Now focuses on the ability to integrate key accessibility features into new General Motors vehicles. With an anticipated two to three years until the technology is ready for the market, After discussing with General Motors they informed us it would be quicker for new features to be implemented into new GM vehicles. The Now ensures that rideshare drivers and standard customers alike can have non-obtrusive safety and accessibility capabilities that improve the passenger experience.</p>
+    <div class="fit-section">
+        <div class="max-content logo-list">
+            <img src="png/gm-logo.png">
         </div>
-        <div class="rowspan-1 colspan-2 cover-image" style="background-image: url('png/ridesafe/Now_1.png');"></div>
     </div>
-    <div class="slide row-2 col-2">
-        <div class="rowspan-1 colspan-1 center-image" style="background-image: url('png/ridesafe/lyft\ next.png'); background-color: white;"></div>
-        <div  class="rowspan-1 colspan-1" style="background-color: white;">
-            <p>The Next is expected to be implemented in a three to five year timeframe, this section focuses on the ability to add accessibility capabilities to existing cars with the goal of improving the rideshare experience for disabled individuals. With features such as RFID vehicle identification, interactive passenger displays, and opportunities for seamless passenger pickup experiences, The Now improves upon existing rideshare services.</p>
+    <div class="fit-section rs-color-dark">
+        <div class="max-content">
+            <p>The VTID program partnered with General Motors to research accessibility in the automotive industry and to cultivate design opportunities for change. Our team researched the lack of accessibility, safety, and adaptive measures in rideshare services. We created RideSafe, a threefold timeline proposal of innovative suggestions that highlight the future of safety and accessibility in rideshare for the General Motors company.</p>
+            <p>My main responsibility was spearheading the design and composition of the magazine with my groupmate Isabelle. We organized and formatted the writing and images as well as the layout of our final document. I was also responsible for many of the Photoshop renders and Figma UI displays and images throughout the magazine. Finally, before coming together as a group I conducted personal research on the effects that different chronic illness' have on a person's ability to drive.</p>
         </div>
-        <div class="rowspan-1 colspan-2 cover-image" style="background-image: url('png/ridesafe/Now\ \(2\).png');"></div>
     </div>
-    <div class="slide row-2 col-2">
-        <div class="rowspan-1 colspan-1 center-image" style="background-image: url('png/ridesafe/cruise\ future.png'); background-color: white;"></div>
-        <div class="rowspan-1 colspan-1" style="background-color: white;">
-            <p>The Future is intended to be implemented with the General Motors subsidiary, Cruise, an upcoming autonomous rideshare vehicle. Taking the integrated features of The Now one step further, The Future looks approximately seven years ahead and aims to ensure that accessibility considerations are carried through to the next stage of General Motors vehicles while continuing to advance technologically.</p>
-        </div>
-        <div class="rowspan-1 colspan-2 cover-image" style="background-image: url('png/ridesafe/Now\ \(3\).png');"></div>
-    </div>
-    <div class="slide row-1 col-3">
-        <iframe class="rowspan-1 colspan-2" src="https://www.canva.com/design/DAFvgqQtCIk/view?embed" allowfullscreen loading="lazy" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"></iframe>
-        <div class="rowspan-1 colspan-1">
-            <h1 class="project-header">final project magazine.</h1>
-            <p>This is the full Ridesafe documentation magazine. At the end, there is an addendum which highlights my contributions to the project.</p>
+    <div class="fit-section slideshow">
+        <div class="max-content">
+            <a class="slideshow-button text-button rs-background-medium rs-color-light" href="pdf/rs-magazine.pdf">Open Final Magazine PDF</a>
+            <div class="slideshow-list drop-shadow">
+                <img src="pdf/rs-magazine/01.png">
+                <img src="pdf/rs-magazine/02.png">
+                <img src="pdf/rs-magazine/03.png">
+                <img src="pdf/rs-magazine/04.png">
+                <img src="pdf/rs-magazine/05.png">
+                <img src="pdf/rs-magazine/06.png">
+                <img src="pdf/rs-magazine/07.png">
+                <img src="pdf/rs-magazine/08.png">
+                <img src="pdf/rs-magazine/09.png">
+                <img src="pdf/rs-magazine/10.png">
+                <img src="pdf/rs-magazine/11.png">
+                <img src="pdf/rs-magazine/12.png">
+                <img src="pdf/rs-magazine/13.png">
+                <img src="pdf/rs-magazine/14.png">
+                <img src="pdf/rs-magazine/15.png">
+                <img src="pdf/rs-magazine/16.png">
+                <img src="pdf/rs-magazine/17.png">
+                <img src="pdf/rs-magazine/18.png">
+                <img src="pdf/rs-magazine/19.png">
+                <img src="pdf/rs-magazine/20.png">
+                <img src="pdf/rs-magazine/21.png">
+                <img src="pdf/rs-magazine/22.png">
+                <img src="pdf/rs-magazine/23.png">
+                <img src="pdf/rs-magazine/24.png">
+            </div>
+            <div class="arrow-container-right" onclick="moveSlideshow(this, 1);">
+                <div class="right-arrow rs-color-medium"></div>
+            </div>
+            <div class="arrow-container-left" onclick="moveSlideshow(this, -1);">
+                <div class="left-arrow rs-color-medium"></div>
+            </div>
         </div>
     </div>
 </body>
