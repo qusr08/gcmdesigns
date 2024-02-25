@@ -34,6 +34,10 @@
     --ws-color-light: #EEE5D7;
     --ws-color-medium: #E9D1AB;
     --ws-color-dark: #24140B;
+
+    --cm-color-light: #C8DAD4;
+    --cm-color-medium: #73988A;
+    --cm-color-dark: #214536;
 }
 
 * {
@@ -315,6 +319,37 @@ p {
 .ws-color-dark {
     color: var(--ws-color-dark);
     border-color: var(--ws-color-dark);
+}
+
+/* #endregion */
+
+/* #region cm */
+
+.cm-background-light {
+    background-color: var(--cm-color-light);
+}
+
+.cm-color-light {
+    color: var(--cm-color-light);
+    border-color: var(--cm-color-light);
+}
+
+.cm-background-medium {
+    background-color: var(--cm-color-medium);
+}
+
+.cm-color-medium {
+    color: var(--cm-color-medium);
+    border-color: var(--cm-color-medium);
+}
+
+.cm-background-dark {
+    background-color: var(--cm-color-dark);
+}
+
+.cm-color-dark {
+    color: var(--cm-color-dark);
+    border-color: var(--cm-color-dark);
 }
 
 /* #endregion */
@@ -711,9 +746,9 @@ gcm-home-tab:hover {
         display: none;
     }
 
-    .image-2>img,
-    .image-3>img {
-        width: 100%;
+    .image-grid-2, .image-grid-3 {
+        display: flex;
+        flex-flow: column nowrap;
     }
 }
 
