@@ -40,6 +40,14 @@
     --cm-color-light: #C8DAD4;
     --cm-color-medium: #73988A;
     --cm-color-dark: #214536;
+
+    --dos-color-light: #E9ECF0;
+    --dos-color-medium: #C3D8DD;
+    --dos-color-dark: #333333;
+
+    --bt-color-light: #E7EEF1;
+    --bt-color-medium: #A7C3CC;
+    --bt-color-dark: #293C43;
 }
 
 * {
@@ -352,6 +360,68 @@ p {
 .cm-color-dark {
     color: var(--cm-color-dark);
     border-color: var(--cm-color-dark);
+}
+
+/* #endregion */
+
+/* #region dos */
+
+.dos-background-light {
+    background-color: var(--dos-color-light);
+}
+
+.dos-color-light {
+    color: var(--dos-color-light);
+    border-color: var(--dos-color-light);
+}
+
+.dos-background-medium {
+    background-color: var(--dos-color-medium);
+}
+
+.dos-color-medium {
+    color: var(--dos-color-medium);
+    border-color: var(--dos-color-medium);
+}
+
+.dos-background-dark {
+    background-color: var(--dos-color-dark);
+}
+
+.dos-color-dark {
+    color: var(--dos-color-dark);
+    border-color: var(--dos-color-dark);
+}
+
+/* #endregion */
+
+/* #region bt */
+
+.bt-background-light {
+    background-color: var(--bt-color-light);
+}
+
+.bt-color-light {
+    color: var(--bt-color-light);
+    border-color: var(--bt-color-light);
+}
+
+.bt-background-medium {
+    background-color: var(--bt-color-medium);
+}
+
+.bt-color-medium {
+    color: var(--bt-color-medium);
+    border-color: var(--bt-color-medium);
+}
+
+.bt-background-dark {
+    background-color: var(--bt-color-dark);
+}
+
+.bt-color-dark {
+    color: var(--bt-color-dark);
+    border-color: var(--bt-color-dark);
 }
 
 /* #endregion */
@@ -748,7 +818,8 @@ gcm-home-tab:hover {
         display: none;
     }
 
-    .image-grid-2, .image-grid-3 {
+    .image-grid-2,
+    .image-grid-3 {
         display: flex;
         flex-flow: column nowrap;
     }
