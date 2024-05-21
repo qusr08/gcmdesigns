@@ -12,15 +12,17 @@
     <link rel="stylesheet" href="css/index.css">
 
     <script src="js/custom-elements.js"></script>
+    <script src="js/perlin-noise-simplex.js"></script>
+    <script src="js/swoopy.js"></script>
     <script src="js/index.js"></script>
 
     <style>
         ::-webkit-scrollbar-track {
-            background-color: var(--cm-color-light);
+            background-color: var(--cm-color-1);
         }
 
         ::-webkit-scrollbar-thumb {
-            background-color: var(--cm-color-medium);
+            background-color: var(--cm-color-2);
         }
     </style>
 
@@ -28,19 +30,12 @@
 </head>
 
 <body>
-    <gcm-home-tab class="cm-background-medium cm-color-dark"></gcm-home-tab>
+    <gcm-home-tab class="cm-background-color-1 cm-color-3"></gcm-home-tab>
     <div class="full-section">
-        <div class="scroll-text-parent cm-color-light">
-            <p class="scroll-text" text="ceramics"></p>
-            <p class="scroll-text" text="ceramics"></p>
-            <p class="scroll-text" text="ceramics"></p>
-            <p class="scroll-text" text="ceramics"></p>
-            <p class="scroll-text" text="ceramics"></p>
-            <p class="scroll-text" text="ceramics"></p>
-            <p class="scroll-text" text="ceramics"></p>
-            <p class="scroll-text" text="ceramics"></p>
+        <div class="swoopy-wrapper cm-color-2">
+            <canvas></canvas>
         </div>
-        <div class="full-content project-header cm-background-light cm-color-dark">
+        <div class="full-content project-header cm-background-color-1 cm-color-3">
             <!-- <img class="project-logo" src="png/ceramics/cm-logo.png"> -->
             <h1>A collection of my ceramics projects</h1>
             <p>Aug 2022 - Dec 2023</p>
@@ -48,35 +43,32 @@
             <div class="down-arrow"></div>
         </div>
     </div>
-    <div class="fit-section cm-color-dark">
+    <div class="fit-section cm-color-3">
         <div class="max-content">
             <div class="block-list">
-                <p class="cm-background-light">Slab Building</p>
-                <p class="cm-background-light">Glazing</p>
-                <p class="cm-background-light">Hand-Carving</p>
-                <p class="cm-background-light">Coil Pots</p>
-                <p class="cm-background-light">Clay Sculpting</p>
-                <p class="cm-background-light">Drape Molding</p>
-                <p class="cm-background-light">Wheel Throwing</p>
+                <p class="cm-background-color-1">Slab Building</p>
+                <p class="cm-background-color-1">Glazing</p>
+                <p class="cm-background-color-1">Hand-Carving</p>
+                <p class="cm-background-color-1">Coil Pots</p>
+                <p class="cm-background-color-1">Clay Sculpting</p>
+                <p class="cm-background-color-1">Drape Molding</p>
+                <p class="cm-background-color-1">Wheel Throwing</p>
             </div>
         </div>
     </div>
-    <div class="fit-section cm-color-dark">
-        <div class="max-content">
-            <div class="horizontal-list">
-                <h1>Professor:</h1>
-                <p>Martha Sullivan</p>
-            </div>
-        </div>
-    </div>
-    <div class="fit-section cm-color-dark">
+    <div class="fit-section cm-color-3">
         <div class="max-content">
             <p>This page displays a selection of the ceramics projects I have completed for Virginia Tech hand-building courses: A Puerto Rico-themed tray, a set of wall pockets, and a set of bowls created for an Empty Bowls charity event.</p>
         </div>
     </div>
+    <div class="fit-section cm-color-3">
+        <div class="max-content vertical-list">
+            <p>Professor: Martha Sullivan</p>
+        </div>
+    </div>
     <div class="fit-section slideshow">
         <div class="max-content">
-            <a class="slideshow-button text-button cm-background-light cm-color-dark" href="pdf/cm-puertoricotray.pdf">Open Puerto Rico Tray PDF</a>
+            <a class="slideshow-button text-button cm-background-color-1 cm-color-3" href="pdf/cm-puertoricotray.pdf">Open Puerto Rico Tray PDF</a>
             <div class="slideshow-list drop-shadow">
                 <img src="pdf/cm-puertoricotray/03.png">
                 <img src="pdf/cm-puertoricotray/01.png">
@@ -90,41 +82,41 @@
                 <img src="pdf/cm-puertoricotray/10.png">
             </div>
             <div class="arrow-container-right" onclick="moveSlideshow(this, 1);">
-                <div class="right-arrow cm-color-medium"></div>
+                <div class="right-arrow cm-color-2"></div>
             </div>
             <div class="arrow-container-left" onclick="moveSlideshow(this, -1);">
-                <div class="left-arrow cm-color-medium"></div>
+                <div class="left-arrow cm-color-2"></div>
             </div>
         </div>
     </div>
     <div class="fit-section slideshow">
         <div class="max-content">
-            <a class="slideshow-button text-button cm-background-light cm-color-dark" href="pdf/cm-wallpockets.pdf">Open Wall Pockets PDF</a>
+            <a class="slideshow-button text-button cm-background-color-1 cm-color-3" href="pdf/cm-wallpockets.pdf">Open Wall Pockets PDF</a>
             <div class="slideshow-list drop-shadow">
                 <img src="pdf/cm-wallpockets/01.png">
                 <img src="pdf/cm-wallpockets/02.png">
             </div>
             <div class="arrow-container-right" onclick="moveSlideshow(this, 1);">
-                <div class="right-arrow cm-color-medium"></div>
+                <div class="right-arrow cm-color-2"></div>
             </div>
             <div class="arrow-container-left" onclick="moveSlideshow(this, -1);">
-                <div class="left-arrow cm-color-medium"></div>
+                <div class="left-arrow cm-color-2"></div>
             </div>
         </div>
     </div>
     <div class="fit-section slideshow">
         <div class="max-content">
-            <a class="slideshow-button text-button cm-background-light cm-color-dark" href="pdf/cm-emptybowls.pdf">Open Empty Bowls PDF</a>
+            <a class="slideshow-button text-button cm-background-color-1 cm-color-3" href="pdf/cm-emptybowls.pdf">Open Empty Bowls PDF</a>
             <div class="slideshow-list drop-shadow">
                 <img src="pdf/cm-emptybowls/03.png">
                 <img src="pdf/cm-emptybowls/01.png">
                 <img src="pdf/cm-emptybowls/02.png">
             </div>
             <div class="arrow-container-right" onclick="moveSlideshow(this, 1);">
-                <div class="right-arrow cm-color-medium"></div>
+                <div class="right-arrow cm-color-2"></div>
             </div>
             <div class="arrow-container-left" onclick="moveSlideshow(this, -1);">
-                <div class="left-arrow cm-color-medium"></div>
+                <div class="left-arrow cm-color-2"></div>
             </div>
         </div>
     </div>

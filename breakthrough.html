@@ -12,15 +12,17 @@
     <link rel="stylesheet" href="css/index.css">
 
     <script src="js/custom-elements.js"></script>
+    <script src="js/perlin-noise-simplex.js"></script>
+    <script src="js/swoopy.js"></script>
     <script src="js/index.js"></script>
 
     <style>
         ::-webkit-scrollbar-track {
-            background-color: var(--bt-color-light);
+            background-color: var(--bt-color-1);
         }
 
         ::-webkit-scrollbar-thumb {
-            background-color: var(--bt-color-medium);
+            background-color: var(--bt-color-2);
         }
     </style>
 
@@ -28,19 +30,12 @@
 </head>
 
 <body>
-    <gcm-home-tab class="bt-background-medium bt-color-dark"></gcm-home-tab>
+    <gcm-home-tab class="bt-background-color-2 bt-color-3"></gcm-home-tab>
     <div class="full-section">
-        <div class="scroll-text-parent bt-color-medium">
-            <p class="scroll-text" text="breakthrough"></p>
-            <p class="scroll-text" text="breakthrough"></p>
-            <p class="scroll-text" text="breakthrough"></p>
-            <p class="scroll-text" text="breakthrough"></p>
-            <p class="scroll-text" text="breakthrough"></p>
-            <p class="scroll-text" text="breakthrough"></p>
-            <p class="scroll-text" text="breakthrough"></p>
-            <p class="scroll-text" text="breakthrough"></p>
+        <div class="swoopy-wrapper bt-color-1">
+            <canvas></canvas>
         </div>
-        <div class="full-content project-header bt-background-medium bt-color-dark" style="transform: unset;">
+        <div class="full-content project-header bt-background-color-2 bt-color-3" style="transform: unset;">
             <img class="project-logo" src="png/breakthrough/bt-logo.png">
             <p>A gravity block puzzle game where players must "break through" the levels</p>
             <p>May 2022 - Present</p>
@@ -48,26 +43,15 @@
             <div class="down-arrow"></div>
         </div>
     </div>
-    <div class="fit-section bt-color-dark">
+    <div class="fit-section bt-color-3">
         <div class="max-content">
             <div class="block-list">
-                <p class="bt-background-medium">Photoshop</p>
-                <p class="bt-background-medium">Illustrator</p>
-                <p class="bt-background-medium">Figma</p>
-                <p class="bt-background-medium">UI/UX</p>
-                <p class="bt-background-medium">Graphic Design</p>
-                <p class="bt-background-medium">Game Design</p>
-            </div>
-        </div>
-    </div>
-    <div class="fit-section bt-color-dark">
-        <div class="max-content">
-            <div class="horizontal-list">
-                <h1>Teammate: Frank Alfano</h1>
-            </div>
-            <div class="horizontal-list">
-                <a class="text-button bt-background-medium bt-color-dark" href="https://www.facebook.com/watch/?mibextid=WC7FNe&rdid=RnX76KqPiA1sPdXL&v=200304286116817">RIT Expo Winner Announcement</a>
-                <a class="text-button bt-background-medium bt-color-dark" href="https://qusr08.github.io/Breakthrough/v1.5.1a/">Play Breakthrough</a>
+                <p class="bt-background-color-2">Photoshop</p>
+                <p class="bt-background-color-2">Illustrator</p>
+                <p class="bt-background-color-2">Figma</p>
+                <p class="bt-background-color-2">UI/UX</p>
+                <p class="bt-background-color-2">Graphic Design</p>
+                <p class="bt-background-color-2">Game Design</p>
             </div>
         </div>
     </div>
@@ -76,10 +60,21 @@
             <img src="png/rit-expo-2023-logo.png">
         </div>
     </div>
-    <div class="fit-section bt-color-dark">
+    <div class="fit-section bt-color-3">
         <div class="max-content">
             <p>Breakthrough is a Tetris-like arcade game where instead of clearing lines, players must strategize and use Boom Blocks and Minos to make their way through the wall. Each mino is a shape made of six blocks that may have a Boom Block attached to it when generated. When a Mino is placed on the board, Boom Blocks are triggered and explode the surrounding area in various patterns. The player's goal is to break through the generated wall and reach the bottom, achieving a breakthrough!</p>
             <p>I collaborated with Frank Alfano, a game designer/developer to make this project. I was responsible for the visuals, art, and UI elements as well as contributing to the overall game design. Breakthrough was submitted in the RIT 2023 Game Showcase and Expo and was awarded the Game Feel category winner. We are currently still developing and editing the game with hopes to release it on Steam!</p>
+        </div>
+    </div>
+    <div class="fit-section bt-color-3">
+        <div class="max-content vertical-list">
+            <p>Teammate: Frank Alfano</p>
+        </div>
+    </div>
+    <div class="fit-section">
+        <div class="max-content horizontal-list">
+            <a class="text-button bt-background-color-2 bt-color-3" href="https://www.facebook.com/watch/?mibextid=WC7FNe&rdid=RnX76KqPiA1sPdXL&v=200304286116817">RIT Expo Winner Announcement</a>
+            <a class="text-button bt-background-color-2 bt-color-3" href="https://qusr08.github.io/Breakthrough/v1.5.1a/">Play Breakthrough</a>
         </div>
     </div>
     <div class="fit-section">

@@ -12,15 +12,17 @@
     <link rel="stylesheet" href="css/index.css">
 
     <script src="js/custom-elements.js"></script>
+    <script src="js/perlin-noise-simplex.js"></script>
+    <script src="js/swoopy.js"></script>
     <script src="js/index.js"></script>
 
     <style>
         ::-webkit-scrollbar-track {
-            background-color: var(--ws-color-light);
+            background-color: var(--ws-color-1);
         }
 
         ::-webkit-scrollbar-thumb {
-            background-color: var(--ws-color-medium);
+            background-color: var(--ws-color-2);
         }
     </style>
 
@@ -28,19 +30,12 @@
 </head>
 
 <body>
-    <gcm-home-tab class="ws-background-medium ws-color-dark"></gcm-home-tab>
+    <gcm-home-tab class="ws-background-color-2 ws-color-3"></gcm-home-tab>
     <div class="full-section">
-        <div class="scroll-text-parent ws-color-light">
-            <p class="scroll-text" text="winsom"></p>
-            <p class="scroll-text" text="winsom"></p>
-            <p class="scroll-text" text="winsom"></p>
-            <p class="scroll-text" text="winsom"></p>
-            <p class="scroll-text" text="winsom"></p>
-            <p class="scroll-text" text="winsom"></p>
-            <p class="scroll-text" text="winsom"></p>
-            <p class="scroll-text" text="winsom"></p>
+        <div class="swoopy-wrapper ws-color-1">
+            <canvas></canvas>
         </div>
-        <div class="full-content project-header ws-background-light ws-color-dark">
+        <div class="full-content project-header ws-background-color-1 ws-color-3">
             <img class="project-logo" src="png/winsom/ws-logo.png">
             <p>A sturdy and stackable studio stool</p>
             <p>Jan 2023 - Feb 2023</p>
@@ -48,30 +43,27 @@
             <div class="down-arrow"></div>
         </div>
     </div>
-    <div class="fit-section ws-color-dark">
+    <div class="fit-section ws-color-3">
         <div class="max-content">
             <div class="block-list">
-                <p class="ws-background-light">Woodworking</p>
-                <p class="ws-background-light">Figma</p>
-                <p class="ws-background-light">Physical Prototyping</p>
-                <p class="ws-background-light">Photoshop</p>
-                <p class="ws-background-light">Illustrator</p>
-                <p class="ws-background-light">Sketching</p>
+                <p class="ws-background-color-1">Woodworking</p>
+                <p class="ws-background-color-1">Figma</p>
+                <p class="ws-background-color-1">Physical Prototyping</p>
+                <p class="ws-background-color-1">Photoshop</p>
+                <p class="ws-background-color-1">Illustrator</p>
+                <p class="ws-background-color-1">Sketching</p>
             </div>
         </div>
     </div>
-    <div class="fit-section ws-color-dark">
-        <div class="max-content">
-            <div class="horizontal-list">
-                <h1>Teammates:</h1>
-                <p>Ethan Carroll, Becca Rainey</p>
-            </div>
-        </div>
-    </div>
-    <div class="fit-section ws-color-dark">
+    <div class="fit-section ws-color-3">
         <div class="max-content">
             <p>Winsom is a group project submission for the annual VTID Program Design Competition which came from the prompt: “Create a studio stool”. Winsom is a sturdy and stackable studio stool that comes with two height variations to accommodate the standard two heights of desks in our design college spaces. We created Winsom with the geometry to be stackable for easy storage and movability, considering how often the chairs and stools in studio are moved around and redistributed throughout the space. I worked on ideation, woodworking, assembly, and composed the poster. Winsom was awarded Honorable Mention in the competition results.</p>
             <p>In addition to group ideation and preliminary sketches, my main responsibility was in the assembly of the stool and the design and composition of the poster and some of its assets.</p>
+        </div>
+    </div>
+    <div class="fit-section ws-color-3">
+        <div class="max-content vertical-list">
+            <p>Teammates: Ethan Carroll, Becca Rainey</p>
         </div>
     </div>
     <div class="fit-section">

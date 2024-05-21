@@ -12,15 +12,17 @@
     <link rel="stylesheet" href="css/index.css">
 
     <script src="js/custom-elements.js"></script>
+    <script src="js/perlin-noise-simplex.js"></script>
+    <script src="js/swoopy.js"></script>
     <script src="js/index.js"></script>
 
     <style>
         ::-webkit-scrollbar-track {
-            background-color: var(--rs-color-light);
+            background-color: var(--rs-color-1);
         }
 
         ::-webkit-scrollbar-thumb {
-            background-color: var(--rs-color-medium);
+            background-color: var(--rs-color-2);
         }
     </style>
 
@@ -28,19 +30,12 @@
 </head>
 
 <body>
-    <gcm-home-tab class="rs-background-medium rs-color-light"></gcm-home-tab>
+    <gcm-home-tab class="rs-background-color-2 rs-color-1"></gcm-home-tab>
     <div class="full-section">
-        <div class="scroll-text-parent rs-color-light">
-            <p class="scroll-text" text="ridesafe"></p>
-            <p class="scroll-text" text="ridesafe"></p>
-            <p class="scroll-text" text="ridesafe"></p>
-            <p class="scroll-text" text="ridesafe"></p>
-            <p class="scroll-text" text="ridesafe"></p>
-            <p class="scroll-text" text="ridesafe"></p>
-            <p class="scroll-text" text="ridesafe"></p>
-            <p class="scroll-text" text="ridesafe"></p>
+        <div class="swoopy-wrapper rs-color-3">
+            <canvas></canvas>
         </div>
-        <div class="full-content project-header rs-background-light rs-color-dark" style="transform: unset;">
+        <div class="full-content project-header rs-background-color-1 rs-color-3" style="transform: unset;">
             <img class="project-logo" src="png/ridesafe/rs-logo.png">
             <p>Threefold timeline proposal of innovative suggestions that highlight the future of safety and accessibility in rideshare for the General Motors company</p>
             <p>Feb 2023 - Apr 2023</p>
@@ -48,32 +43,13 @@
             <div class="down-arrow"></div>
         </div>
     </div>
-    <div class="fit-section rs-color-light">
+    <div class="fit-section rs-color-1">
         <div class="max-content">
             <div class="block-list">
-                <p class="rs-background-medium">Illustrator</p>
-                <p class="rs-background-medium">Figma UI</p>
-                <p class="rs-background-medium">Research and Interviews with Users</p>
-                <p class="rs-background-medium">Photoshop</p>
-            </div>
-        </div>
-    </div>
-    <div class="fit-section rs-color-dark">
-        <div class="max-content">
-            <div class="horizontal-list">
-                <h1>Teammates:</h1>
-                <p>Isabelle Patrick, Michael Silverman, Aidan O'Driscoll, Meriel Carney, and Stefaan Meinert</p>
-            </div>
-            <!-- <div class="horizontal-list">
-                <h1>Collaborator:</h1>
-                <p>General Motors</p>
-            </div> -->
-            <div class="horizontal-list">
-                <h1>Professors:</h1>
-                <p>Ben Kirkland, Martha Sullivan</p>
-            </div>
-            <div class="horizontal-list">
-                <a class="text-button rs-background-medium rs-color-light" href="https://news.vt.edu/articles/2023/10/aad-industrial-design-students-gm.html ">VT General Motors Collaboration Article</a>
+                <p class="rs-background-color-2">Illustrator</p>
+                <p class="rs-background-color-2">Figma UI</p>
+                <p class="rs-background-color-2">Research and Interviews with Users</p>
+                <p class="rs-background-color-2">Photoshop</p>
             </div>
         </div>
     </div>
@@ -82,15 +58,27 @@
             <img src="png/gm-logo.png">
         </div>
     </div>
-    <div class="fit-section rs-color-dark">
+    <div class="fit-section rs-color-3">
         <div class="max-content">
             <p>The VTID program partnered with General Motors to research accessibility in the automotive industry and to cultivate design opportunities for change. Our team researched the lack of accessibility, safety, and adaptive measures in rideshare services. We created Ridesafe, a threefold timeline proposal of innovative suggestions that highlight the future of safety and accessibility in rideshare for the General Motors company.</p>
             <p>My main responsibility was spearheading the design and composition of the magazine with my groupmate Isabelle. We organized and formatted the writing and images as well as the layout of our final document. I was also responsible for many of the Photoshop renders and Figma UI displays and images throughout the magazine. Finally, before coming together as a group I conducted personal research on the effects that different chronic illnesses have on a person's ability to drive.</p>
         </div>
     </div>
+    <div class="fit-section rs-color-3">
+        <div class="max-content vertical-list">
+            <p>Teammates: Isabelle Patrick, Michael Silverman, Aidan O'Driscoll, Meriel Carney, and Stefaan Meinert</p>
+            <!-- <p>Collaborator: General Motors</p> -->
+            <p>Professors: Ben Kirkland, Martha Sullivan</p>
+        </div>
+    </div>
+    <div class="fit-section">
+        <div class="max-content horizontal-list">
+            <a class="text-button rs-background-color-2 rs-color-1" href="https://news.vt.edu/articles/2023/10/aad-industrial-design-students-gm.html ">VT General Motors Collaboration Article</a>
+        </div>
+    </div>
     <div class="fit-section slideshow">
         <div class="max-content">
-            <a class="slideshow-button text-button rs-background-medium rs-color-light" href="pdf/rs-magazine.pdf">Open Final Magazine PDF</a>
+            <a class="slideshow-button text-button rs-background-color-2 rs-color-1" href="pdf/rs-magazine.pdf">Open Final Magazine PDF</a>
             <div class="slideshow-list drop-shadow">
                 <img src="pdf/rs-magazine/01.png">
                 <img src="pdf/rs-magazine/02.png">
@@ -118,10 +106,10 @@
                 <img src="pdf/rs-magazine/24.png">
             </div>
             <div class="arrow-container-right" onclick="moveSlideshow(this, 1);">
-                <div class="right-arrow rs-color-medium"></div>
+                <div class="right-arrow rs-color-2"></div>
             </div>
             <div class="arrow-container-left" onclick="moveSlideshow(this, -1);">
-                <div class="left-arrow rs-color-medium"></div>
+                <div class="left-arrow rs-color-2"></div>
             </div>
         </div>
     </div>

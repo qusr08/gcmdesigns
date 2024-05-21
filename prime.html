@@ -12,15 +12,17 @@
     <link rel="stylesheet" href="css/index.css">
 
     <script src="js/custom-elements.js"></script>
+    <script src="js/perlin-noise-simplex.js"></script>
+    <script src="js/swoopy.js"></script>
     <script src="js/index.js"></script>
 
     <style>
         ::-webkit-scrollbar-track {
-            background-color: var(--pr-color-light);
+            background-color: var(--pr-color-1);
         }
 
         ::-webkit-scrollbar-thumb {
-            background-color: var(--pr-color-medium);
+            background-color: var(--pr-color-2);
         }
     </style>
 
@@ -28,19 +30,12 @@
 </head>
 
 <body>
-    <gcm-home-tab class="pr-background-light pr-color-medium"></gcm-home-tab>
+    <gcm-home-tab class="pr-background-color-1 pr-color-2"></gcm-home-tab>
     <div class="full-section">
-        <div class="scroll-text-parent pr-color-dark" style="opacity: 0.5;">
-            <p class="scroll-text" text="prime"></p>
-            <p class="scroll-text" text="prime"></p>
-            <p class="scroll-text" text="prime"></p>
-            <p class="scroll-text" text="prime"></p>
-            <p class="scroll-text" text="prime"></p>
-            <p class="scroll-text" text="prime"></p>
-            <p class="scroll-text" text="prime"></p>
-            <p class="scroll-text" text="prime"></p>
+        <div class="swoopy-wrapper pr-color-4">
+            <canvas></canvas>
         </div>
-        <div class="full-content project-header pr-background-light pr-color-medium">
+        <div class="full-content project-header pr-background-color-1 pr-color-2">
             <img class="project-logo" src="png/prime/pr-logo.png">
             <p>A playful and adaptable lightswitch</p>
             <p>Aug 2023 - Sep 2023</p>
@@ -48,34 +43,31 @@
             <div class="down-arrow"></div>
         </div>
     </div>
-    <div class="fit-section pr-color-dark">
+    <div class="fit-section pr-color-3">
         <div class="max-content">
-            <div class="block-list pr-color-medium">
-                <p class="pr-background-light">SolidWorks/Rendering</p>
-                <p class="pr-background-light">Research</p>
-                <p class="pr-background-light">3D Printing</p>
-                <p class="pr-background-light">Physical Prototyping</p>
-                <p class="pr-background-light">Photoshop</p>
-                <p class="pr-background-light">Procreate</p>
+            <div class="block-list pr-color-2">
+                <p class="pr-background-color-1">SolidWorks/Rendering</p>
+                <p class="pr-background-color-1">Research</p>
+                <p class="pr-background-color-1">3D Printing</p>
+                <p class="pr-background-color-1">Physical Prototyping</p>
+                <p class="pr-background-color-1">Photoshop</p>
+                <p class="pr-background-color-1">Procreate</p>
             </div>
         </div>
     </div>
-    <div class="fit-section pr-color-dark">
-        <div class="max-content">
-            <div class="horizontal-list">
-                <h1>Professor:</h1>
-                <p>Brook Kennedy</p>
-            </div>
-        </div>
-    </div>
-    <div class="fit-section pr-color-dark">
+    <div class="fit-section pr-color-3">
         <div class="max-content">
             <p>Forgetting to turn off unused lights in homes is a major contributor to light pollution and electricity waste globally. Through this project, I researched and explored opportunities for encouraging users to turn off the lights before they leave a room. Prime is the playful, customizable, and satisfying dimmer switch that when off represents completion due to its graphics and circular designs being "reset".</p>
         </div>
     </div>
+    <div class="fit-section pr-color-3">
+        <div class="max-content vertical-list">
+            <p>Professors: Brook Kennedy</p>
+        </div>
+    </div>
     <div class="fit-section slideshow">
         <div class="max-content">
-            <a class="slideshow-button text-button pr-background-light pr-color-medium" href="pdf/pr-presentation.pdf">Open Final Presentation PDF</a>
+            <a class="slideshow-button text-button pr-background-color-1 pr-color-2" href="pdf/pr-presentation.pdf">Open Final Presentation PDF</a>
             <div class="slideshow-list drop-shadow">
                 <img src="pdf/pr-presentation/01.png">
                 <img src="pdf/pr-presentation/02.png">
@@ -97,10 +89,10 @@
                 <img src="pdf/pr-presentation/18.png">
             </div>
             <div class="arrow-container-right" onclick="moveSlideshow(this, 1);">
-                <div class="right-arrow pr-color-medium"></div>
+                <div class="right-arrow pr-color-2"></div>
             </div>
             <div class="arrow-container-left" onclick="moveSlideshow(this, -1);">
-                <div class="left-arrow pr-color-medium"></div>
+                <div class="left-arrow pr-color-2"></div>
             </div>
         </div>
     </div>

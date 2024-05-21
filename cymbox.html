@@ -12,15 +12,17 @@
     <link rel="stylesheet" href="css/index.css">
 
     <script src="js/custom-elements.js"></script>
+    <script src="js/perlin-noise-simplex.js"></script>
+    <script src="js/swoopy.js"></script>
     <script src="js/index.js"></script>
 
     <style>
         ::-webkit-scrollbar-track {
-            background-color: var(--cb-color-light);
+            background-color: var(--cb-color-1);
         }
 
         ::-webkit-scrollbar-thumb {
-            background-color: var(--cb-color-medium);
+            background-color: var(--cb-color-2);
         }
     </style>
 
@@ -28,19 +30,12 @@
 </head>
 
 <body>
-    <gcm-home-tab class="cb-background-light cb-color-medium"></gcm-home-tab>
+    <gcm-home-tab class="cb-background-color-1 cb-color-2"></gcm-home-tab>
     <div class="full-section">
-        <div class="scroll-text-parent cb-color-medium">
-            <p class="scroll-text" text="cymbox"></p>
-            <p class="scroll-text" text="cymbox"></p>
-            <p class="scroll-text" text="cymbox"></p>
-            <p class="scroll-text" text="cymbox"></p>
-            <p class="scroll-text" text="cymbox"></p>
-            <p class="scroll-text" text="cymbox"></p>
-            <p class="scroll-text" text="cymbox"></p>
-            <p class="scroll-text" text="cymbox"></p>
+        <div class="swoopy-wrapper cb-color-4">
+            <canvas></canvas>
         </div>
-        <div class="full-content project-header cb-background-light cb-color-dark">
+        <div class="full-content project-header cb-background-color-1 cb-color-3">
             <img class="project-logo" src="png/cymbox/cb-logo.png">
             <p>A modular toy block set, game, and lighting feature made to grow with and be a part of every home</p>
             <p>Jan 2024 - May 2024</p>
@@ -48,40 +43,34 @@
             <div class="down-arrow"></div>
         </div>
     </div>
-    <div class="fit-section cb-color-dark">
+    <div class="fit-section cb-color-3">
         <div class="max-content">
             <div class="block-list">
-                <p class="cb-background-medium">Photoshop</p>
-                <p class="cb-background-medium">Illustrator</p>
-                <p class="cb-background-medium">Solidworks</p>
-                <p class="cb-background-medium">Canva</p>
-                <p class="cb-background-medium">Procreate</p>
-                <p class="cb-background-medium">Graphic Design</p>
-                <p class="cb-background-medium">Game Design</p>
+                <p class="cb-background-color-2">Photoshop</p>
+                <p class="cb-background-color-2">Illustrator</p>
+                <p class="cb-background-color-2">Solidworks</p>
+                <p class="cb-background-color-2">Canva</p>
+                <p class="cb-background-color-2">Procreate</p>
+                <p class="cb-background-color-2">Graphic Design</p>
+                <p class="cb-background-color-2">Game Design</p>
             </div>
         </div>
     </div>
-    <div class="fit-section cb-color-dark">
-        <div class="max-content">
-            <div class="horizontal-list">
-                <h1>Programming Consultant:</h1>
-                <p>Frank Alfano</p>
-            </div>
-            <div class="horizontal-list">
-                <h1>Professor:</h1>
-                <p>Brook Kennedy</p>
-            </div>
-        </div>
-    </div>
-    <div class="fit-section cb-color-dark">
+    <div class="fit-section cb-color-3">
         <div class="max-content">
             <p>Cymbox is my final industrial design senior thesis project. It is the culmination of months of research and development relating to toy waste and what it means to elongate a product's life and increase the user's emotional connection to products. Cymbox is a 25-wooden block set with an accompanying stacking game, that is housed around a customizable lighting feature.</p>
             <p>The design of Cymbox is influenced by the increasing amount of global toy waste that comes from low-quality items, rapidly changing households and abilities, and visually unappealing products that enter homes. These three factors cause a lower emotional connection from the users, thus resulting in less consideration for a product's end-of-life process. When users spend more time with a product and care more about it, there's a better chance for the item to be passed down, donated, or gifted rather than trashed and discarded. Cymbox aims to expand the user group of the toy and game with multiple difficulty levels and methods of play, as well as being a customizable and modern decoration and light piece for any home.</p>
         </div>
     </div>
+    <div class="fit-section cb-color-3">
+        <div class="max-content vertical-list">
+            <p>Programming Consultant: Frank Alfano</p>
+            <p>Professor: Brook Kennedy</p>
+        </div>
+    </div>
     <div class="fit-section slideshow">
         <div class="max-content">
-            <a class="slideshow-button text-button cb-background-medium cb-color-dark" href="pdf/cb-processbook.pdf">Open Process Book PDF</a>
+            <a class="slideshow-button text-button cb-background-color-2 cb-color-3" href="pdf/cb-processbook.pdf">Open Process Book PDF</a>
             <div class="slideshow-list drop-shadow">
                 <img src="pdf/cb-processbook/01.png">
                 <img src="pdf/cb-processbook/02.png">
@@ -121,10 +110,10 @@
                 <img src="pdf/cb-processbook/36.png">
             </div>
             <div class="arrow-container-right" onclick="moveSlideshow(this, 1);">
-                <div class="right-arrow cb-color-medium"></div>
+                <div class="right-arrow cb-color-2"></div>
             </div>
             <div class="arrow-container-left" onclick="moveSlideshow(this, -1);">
-                <div class="left-arrow cb-color-medium"></div>
+                <div class="left-arrow cb-color-2"></div>
             </div>
         </div>
     </div>

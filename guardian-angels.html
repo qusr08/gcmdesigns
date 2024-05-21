@@ -12,15 +12,17 @@
     <link rel="stylesheet" href="css/index.css">
 
     <script src="js/custom-elements.js"></script>
+    <script src="js/perlin-noise-simplex.js"></script>
+    <script src="js/swoopy.js"></script>
     <script src="js/index.js"></script>
 
     <style>
         ::-webkit-scrollbar-track {
-            background-color: var(--ga-color-light);
+            background-color: var(--ga-color-1);
         }
 
         ::-webkit-scrollbar-thumb {
-            background-color: var(--ga-color-medium);
+            background-color: var(--ga-color-2);
         }
     </style>
 
@@ -28,19 +30,12 @@
 </head>
 
 <body>
-    <gcm-home-tab class="ga-background-medium ga-color-dark"></gcm-home-tab>
+    <gcm-home-tab class="ga-background-color-1 ga-color-3"></gcm-home-tab>
     <div class="full-section">
-        <div class="scroll-text-parent ga-color-light">
-            <p class="scroll-text" text="guardian angels"></p>
-            <p class="scroll-text" text="guardian angels"></p>
-            <p class="scroll-text" text="guardian angels"></p>
-            <p class="scroll-text" text="guardian angels"></p>
-            <p class="scroll-text" text="guardian angels"></p>
-            <p class="scroll-text" text="guardian angels"></p>
-            <p class="scroll-text" text="guardian angels"></p>
-            <p class="scroll-text" text="guardian angels"></p>
+        <div class="swoopy-wrapper ga-color-2">
+            <canvas></canvas>
         </div>
-        <div class="full-content project-header ga-background-light ga-color-dark">
+        <div class="full-content project-header ga-background-color-1 ga-color-3">
             <img class="project-logo" src="png/guardian-angels/ga-logo.png">
             <p>A zero-waste upcycling program that donates clothing, backpacks, toys, and an annual monetary donation to the Floyd County Department of Social Services to help families and children in need</p>
             <p>Sep 2023 - Dec 2023</p>
@@ -48,31 +43,15 @@
             <div class="down-arrow"></div>
         </div>
     </div>
-    <div class="fit-section ga-color-dark">
+    <div class="fit-section ga-color-3">
         <div class="max-content">
             <div class="block-list">
-                <p class="ga-background-light">Textile Work and Sewing</p>
-                <p class="ga-background-light">Illustrator</p>
-                <p class="ga-background-light">Photoshop</p>
-                <p class="ga-background-light">Procreate</p>
-                <p class="ga-background-light">Physical Prototyping</p>
-                <p class="ga-background-light">Research</p>
-            </div>
-        </div>
-    </div>
-    <div class="fit-section ga-color-dark">
-        <div class="max-content">
-            <div class="horizontal-list">
-                <h1>Collaborator:</h1>
-                <p>Angels In The Attic</p>
-            </div>
-            <!-- <div class="horizontal-list">
-                <h1>Sponsor:</h1>
-                <p>SustainFloyd</p>
-            </div> -->
-            <div class="horizontal-list">
-                <h1>Professor:</h1>
-                <p>Brook Kennedy</p>
+                <p class="ga-background-color-1">Textile Work and Sewing</p>
+                <p class="ga-background-color-1">Illustrator</p>
+                <p class="ga-background-color-1">Photoshop</p>
+                <p class="ga-background-color-1">Procreate</p>
+                <p class="ga-background-color-1">Physical Prototyping</p>
+                <p class="ga-background-color-1">Research</p>
             </div>
         </div>
     </div>
@@ -81,14 +60,21 @@
             <img src="png/sf-logo.png">
         </div>
     </div>
-    <div class="fit-section ga-color-dark">
+    <div class="fit-section ga-color-3">
         <div class="max-content">
             <p>The VTID program partnered with and was sponsored by SustainFloyd to innovate sustainable business solutions and opportunities for various Floyd businesses. I selected Angels in the Attic, a donation based second-hand clothing non-profit that donates their earnings to various local charities and organizations. Guardian Angels is a zero-waste upcycling program curated for Angels in the Attic. The program creates bags and toys from excess or damaged clothing, sells bags in their storefront, and will make an annual donation of toys, clothing, backpacks, and a monetary donation to the Floyd County Department of Social Services.</p>
         </div>
     </div>
+    <div class="fit-section ga-color-3">
+        <div class="max-content vertical-list">
+            <p>Collaborator: Angels In The Attic</p>
+            <!-- <p>Sponsor: SustainFloyd</p> -->
+            <p>Professor: Brook Kennedy</p>
+        </div>
+    </div>
     <div class="fit-section slideshow">
         <div class="max-content">
-            <a class="slideshow-button text-button ga-background-light ga-color-dark" href="pdf/ga-processbook.pdf">Open Process Book PDF</a>
+            <a class="slideshow-button text-button ga-background-color-1 ga-color-3" href="pdf/ga-processbook.pdf">Open Process Book PDF</a>
             <div class="slideshow-list drop-shadow">
                 <img src="pdf/ga-processbook/01.png">
                 <img src="pdf/ga-processbook/02.png">
@@ -111,10 +97,10 @@
                 <img src="pdf/ga-processbook/19.png">
             </div>
             <div class="arrow-container-right" onclick="moveSlideshow(this, 1);">
-                <div class="right-arrow ga-color-medium"></div>
+                <div class="right-arrow ga-color-2"></div>
             </div>
             <div class="arrow-container-left" onclick="moveSlideshow(this, -1);">
-                <div class="left-arrow ga-color-medium"></div>
+                <div class="left-arrow ga-color-2"></div>
             </div>
         </div>
     </div>

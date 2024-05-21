@@ -12,15 +12,17 @@
     <link rel="stylesheet" href="css/index.css">
 
     <script src="js/custom-elements.js"></script>
+    <script src="js/perlin-noise-simplex.js"></script>
+    <script src="js/swoopy.js"></script>
     <script src="js/index.js"></script>
 
     <style>
         ::-webkit-scrollbar-track {
-            background-color: var(--dbe-color-light);
+            background-color: var(--dbe-color-1);
         }
 
         ::-webkit-scrollbar-thumb {
-            background-color: var(--dbe-color-medium);
+            background-color: var(--dbe-color-2);
         }
     </style>
 
@@ -28,19 +30,12 @@
 </head>
 
 <body>
-    <gcm-home-tab class="dbe-background-medium dbe-color-dark"></gcm-home-tab>
+    <gcm-home-tab class="dbe-background-color-3 dbe-color-1"></gcm-home-tab>
     <div class="full-section">
-        <div class="scroll-text-parent dbe-color-light">
-            <p class="scroll-text" text="design in the built environment"></p>
-            <p class="scroll-text" text="design in the built environment"></p>
-            <p class="scroll-text" text="design in the built environment"></p>
-            <p class="scroll-text" text="design in the built environment"></p>
-            <p class="scroll-text" text="design in the built environment"></p>
-            <p class="scroll-text" text="design in the built environment"></p>
-            <p class="scroll-text" text="design in the built environment"></p>
-            <p class="scroll-text" text="design in the built environment"></p>
+        <div class="swoopy-wrapper dbe-color-2">
+            <canvas></canvas>
         </div>
-        <div class="full-content project-header dbe-background-light dbe-color-dark" style="transform: unset;">
+        <div class="full-content project-header dbe-background-color-1 dbe-color-3" style="transform: unset;">
             <img class="project-logo" src="png/design-in-the-built-environment/dbe-logo.png">
             <p>Documentation and research findings of studying water features and fixtures in the Western European built environment</p>
             <p>May 2023 - Jun 2023</p>
@@ -48,37 +43,36 @@
             <div class="down-arrow"></div>
         </div>
     </div>
-    <div class="fit-section dbe-color-dark">
+    <div class="fit-section dbe-color-3">
         <div class="max-content">
             <div class="block-list">
-                <p class="dbe-background-light">Sketching</p>
-                <p class="dbe-background-light">Photography</p>
-                <p class="dbe-background-light">Observational Skills</p>
-                <p class="dbe-background-light">Research</p>
-                <p class="dbe-background-light">Figma</p>
-                <p class="dbe-background-light">Photoshop</p>
+                <p class="dbe-background-color-1">Sketching</p>
+                <p class="dbe-background-color-1">Photography</p>
+                <p class="dbe-background-color-1">Observational Skills</p>
+                <p class="dbe-background-color-1">Research</p>
+                <p class="dbe-background-color-1">Figma</p>
+                <p class="dbe-background-color-1">Photoshop</p>
             </div>
         </div>
     </div>
-    <div class="fit-section dbe-color-dark">
-        <div class="max-content">
-            <div class="horizontal-list">
-                <h1>Professors:</h1>
-                <p>Martha Sullivan, Terry Clements</p>
-            </div>
-            <div class="horizontal-list">
-                <a class="text-button dbe-background-light dbe-color-dark" href="https://www.linkedin.com/posts/virginia-tech-industrial-design-advisory-board_were-incredibly-excited-to-announce-this-activity-7065385834853588992-tZEA/?utm_source=share&utm_medium=member_desktop">IDAB Travel Award Recipient Post</a>
-            </div>
-        </div>
-    </div>
-    <div class="fit-section dbe-color-dark">
+    <div class="fit-section dbe-color-3">
         <div class="max-content">
             <p>Throughout the summer of 2023, I spent one month traveling Western Europe on an industrial design and landscape architecture research trip focusing on design in the built environment. I quickly became interested and intrigued by water features and fixtures and continued studying, observing, discussing, and sketching them throughout the remainder of our trip. An exciting highlight of the trip was when our team visited the LEGO Group in Denmark, and I was able to present and discuss my research of how water facilitates and encourages play in various forms. In my research documentation book I discuss many of the themes and topics that I found from observing the built environment and how we interact with water fixtures.</p>
         </div>
     </div>
+    <div class="fit-section dbe-color-3">
+        <div class="max-content vertical-list">
+            <p>Professors: Martha Sullivan, Terry Clements</p>
+        </div>
+    </div>
+    <div class="fit-section">
+        <div class="max-content horizontal-list">
+            <a class="text-button dbe-background-color-1 dbe-color-3" href="https://www.linkedin.com/posts/virginia-tech-industrial-design-advisory-board_were-incredibly-excited-to-announce-this-activity-7065385834853588992-tZEA/?utm_source=share&utm_medium=member_desktop">IDAB Travel Award Recipient Post</a>
+        </div>
+    </div>
     <div class="fit-section slideshow">
         <div class="max-content">
-            <a class="slideshow-button text-button dbe-background-light dbe-color-dark" href="pdf/dbe-documentation.pdf">Open Documentation PDF</a>
+            <a class="slideshow-button text-button dbe-background-color-1 dbe-color-3" href="pdf/dbe-documentation.pdf">Open Documentation PDF</a>
             <div class="slideshow-list drop-shadow">
                 <img src="pdf/dbe-documentation/01.png">
                 <img src="pdf/dbe-documentation/02.png">
@@ -101,16 +95,16 @@
                 <img src="pdf/dbe-documentation/19.png">
             </div>
             <div class="arrow-container-right" onclick="moveSlideshow(this, 1);">
-                <div class="right-arrow dbe-color-medium"></div>
+                <div class="right-arrow dbe-color-2"></div>
             </div>
             <div class="arrow-container-left" onclick="moveSlideshow(this, -1);">
-                <div class="left-arrow dbe-color-medium"></div>
+                <div class="left-arrow dbe-color-2"></div>
             </div>
         </div>
     </div>
     <div class="fit-section slideshow">
         <div class="max-content">
-            <a class="slideshow-button text-button dbe-background-light dbe-color-dark" href="pdf/dbe-sketches.pdf">Open Sketches PDF</a>
+            <a class="slideshow-button text-button dbe-background-color-1 dbe-color-3" href="pdf/dbe-sketches.pdf">Open Sketches PDF</a>
             <div class="slideshow-list drop-shadow">
                 <img src="pdf/dbe-sketches/01.png">
                 <img src="pdf/dbe-sketches/04.png">
@@ -131,10 +125,10 @@
                 <img src="pdf/dbe-sketches/03.png">
             </div>
             <div class="arrow-container-right" onclick="moveSlideshow(this, 1);">
-                <div class="right-arrow dbe-color-medium"></div>
+                <div class="right-arrow dbe-color-2"></div>
             </div>
             <div class="arrow-container-left" onclick="moveSlideshow(this, -1);">
-                <div class="left-arrow dbe-color-medium"></div>
+                <div class="left-arrow dbe-color-2"></div>
             </div>
         </div>
     </div>

@@ -12,15 +12,17 @@
     <link rel="stylesheet" href="css/index.css">
 
     <script src="js/custom-elements.js"></script>
+    <script src="js/perlin-noise-simplex.js"></script>
+    <script src="js/swoopy.js"></script>
     <script src="js/index.js"></script>
 
     <style>
         ::-webkit-scrollbar-track {
-            background-color: var(--dos-color-light);
+            background-color: var(--dos-color-1);
         }
 
         ::-webkit-scrollbar-thumb {
-            background-color: var(--dos-color-medium);
+            background-color: var(--dos-color-2);
         }
     </style>
 
@@ -28,19 +30,12 @@
 </head>
 
 <body>
-    <gcm-home-tab class="dos-background-medium dos-color-dark"></gcm-home-tab>
+    <gcm-home-tab class="dos-background-color-2 dos-color-3"></gcm-home-tab>
     <div class="full-section">
-        <div class="scroll-text-parent dos-color-medium">
-            <p class="scroll-text" text="dos"></p>
-            <p class="scroll-text" text="dos"></p>
-            <p class="scroll-text" text="dos"></p>
-            <p class="scroll-text" text="dos"></p>
-            <p class="scroll-text" text="dos"></p>
-            <p class="scroll-text" text="dos"></p>
-            <p class="scroll-text" text="dos"></p>
-            <p class="scroll-text" text="dos"></p>
+        <div class="swoopy-wrapper dos-color-3">
+            <canvas></canvas>
         </div>
-        <div class="full-content project-header dos-background-medium dos-color-dark" style="transform: unset;">
+        <div class="full-content project-header dos-background-color-2 dos-color-3" style="transform: unset;">
             <img class="project-logo" src="png/dos/dos-logo.png">
             <p>A single-player puzzle game where players strategically roll a die to flip the two face on top!</p>
             <p>Jul 2022 - Aug 2022</p>
@@ -48,26 +43,15 @@
             <div class="down-arrow"></div>
         </div>
     </div>
-    <div class="fit-section dos-color-dark">
+    <div class="fit-section dos-color-3">
         <div class="max-content">
             <div class="block-list">
-                <p class="dos-background-medium">Photoshop</p>
-                <p class="dos-background-medium">Illustrator</p>
-                <p class="dos-background-medium">Figma</p>
-                <p class="dos-background-medium">UI/UX</p>
-                <p class="dos-background-medium">Graphic Design</p>
-                <p class="dos-background-medium">Game Design</p>
-            </div>
-        </div>
-    </div>
-    <div class="fit-section dos-color-dark">
-        <div class="max-content">
-            <div class="horizontal-list">
-                <h1>Teammate: Frank Alfano</h1>
-            </div>
-            <div class="horizontal-list">
-                <a class="text-button dos-background-medium dos-color-dark" href="https://itch.io/jam/gmtk-jam-2022/rate/1623540">GMTK Game Jam 2022 Submission Page</a>
-                <a class="text-button dos-background-medium dos-color-dark" href="https://qusr08.github.io/DOS/">Play DOS</a>
+                <p class="dos-background-color-2">Photoshop</p>
+                <p class="dos-background-color-2">Illustrator</p>
+                <p class="dos-background-color-2">Figma</p>
+                <p class="dos-background-color-2">UI/UX</p>
+                <p class="dos-background-color-2">Graphic Design</p>
+                <p class="dos-background-color-2">Game Design</p>
             </div>
         </div>
     </div>
@@ -76,10 +60,21 @@
             <img src="png/gmtk-jam-2022-logo.png">
         </div>
     </div>
-    <div class="fit-section dos-color-dark">
+    <div class="fit-section dos-color-3">
         <div class="max-content">
             <p>DOS (the number two in Spanish) is a single-player puzzle game that was created for the 2022 Game Maker's Toolkit 48 hour game jam. The theme was "Roll of the Dice" and I suggested for us to take the theme literally by creating a game where the player is physically rolling a die. The objective of DOS is to roll the die strategically in order to have its two face facing up! We introduced different tiles that have different mechanics that can move, rotate, or restrict the die which players have to keep in mind in order to reach their objective.</p>
             <p>I was responsible for visuals, colors, textures, and contributed to the level design as well. DOS was completed in the 48 hours given and placed in the top 5% out of over 6200 submissions!</p>
+        </div>
+    </div>
+    <div class="fit-section dos-color-3">
+        <div class="max-content vertical-list">
+            <p>Teammate: Frank Alfano</p>
+        </div>
+    </div>
+    <div class="fit-section">
+        <div class="max-content horizontal-list">
+            <a class="text-button dos-background-color-2 dos-color-3" href="https://itch.io/jam/gmtk-jam-2022/rate/1623540">GMTK Game Jam 2022 Submission Page</a>
+            <a class="text-button dos-background-color-2 dos-color-3" href="https://qusr08.github.io/DOS/">Play DOS</a>
         </div>
     </div>
     <div class="fit-section">
